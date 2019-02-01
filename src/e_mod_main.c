@@ -609,7 +609,7 @@ _conf_init(E_Module *m)
    e_configure_registry_category_add
      ("launcher", 80, _("Launcher"), NULL, "modules-launcher");
 
-   snprintf(title, sizeof(title), "%s: %s", _("Launcher Plugin"), _("Evry Dict"));
+   snprintf(title, sizeof(title), "%s: %s", _("Launcher Plugin"), _("Launcher Dictionary"));
    e_configure_registry_item_add(_config_path, 110, title,
              NULL, _module_icon, _conf_dialog);
 
