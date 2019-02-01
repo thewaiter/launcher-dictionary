@@ -1,0 +1,63 @@
+dnl Process this file with autoconf to produce a configure script.
+
+# get rid of that stupid cache mechanism
+rm -f config.cache
+
+AC_INIT(Evry Dictionary, 0.0.1, thewaiter@centrum.sk)
+AC_PREREQ(2.52)
+AC_CONFIG_SRCDIR(configure.ac)
+AC_CANONICAL_BUILD
+AC_CANONICAL_HOST
+AC_ISC_POSIX
+
+AM_INIT_AUTOMAKE([foreign])
+
+AC_CONFIG_HEADERS(config.h)
+AC_CONFIG_MACRO_DIRS([m4])
+
+m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+m4_divert_text([DEFAULTS], [: "${ARFLAGS=cr} ${AR_FLAGS=cr}"])
+
+AC_PROG_CC
+AC_HEADER_STDC
+AC_C_CONST
+AC_C___ATTRIBUTE__
+
+define([AC_LIBTOOL_LANG_CXX_CONFIG], [:])dnl
+define([AC_LIBTOOL_LANG_F77_CONFIG], [:])dnl
+AC_PROG_LIBTOOL
+
+m4_ifdef([AM_GNU_GETTEXT_VERSION], [
+AM_GNU_GETTEXT_VERSION([0.14])
+])
+
+m4_ifdef([AM_GNU_GETTEXT], [
+AM_GNU_GETTEXT([external])
+po_makefile_in=po/Makefile.in
+AM_CONDITIONAL([HAVE_PO], [true])
+],[
+AM_CONDITIONAL([HAVE_PO], [false])
+])
+AC_SUBST(LTLIBINTL)
+
+PKG_CHECK_MODULES(MOKSHA, [enlightenment])
+PKG_CHECK_MODULES(LAUNCHER, [everything])
+
+release=$(pkg-config --variable=release enlightenment)
+MODULE_ARCH="$host_os-$host_cpu"
+AC_SUBST(MODULE_ARCH)
+AC_DEFINE_UNQUOTED(MODULE_ARCH, "$MODULE_ARCH", "Module architecture")
+
+datadir=$(pkg-config --variable=modules enlightenment)/${PACKAGE}
+AC_ARG_ENABLE(homedir-install,
+  AS_HELP_STRING([--enable-homedir-install], [Install module in homedir]),
+  [ datadir="${HOME}/.e/e/modules/${PACKAGE}" ]
+)
+
+AC_OUTPUT([
+Makefile
+src/Makefile
+module.desktop
+$po_makefile_in
+], [
+])
