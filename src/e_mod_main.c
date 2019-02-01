@@ -229,7 +229,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
 
    if (p->is_first)
      {
-        ERR("ASPELL: %s", l->line);
+        ERR("DICT: %s", l->line);
         p->is_first = 0;
         continue;
      }
@@ -628,7 +628,7 @@ _conf_init(E_Module *m)
 
    _conf = e_config_domain_load(_config_domain, _conf_edd);
 
-   if (_conf && !e_util_module_config_check(_("Everything Aspell"),
+   if (_conf && !e_util_module_config_check(_("Everything Dictionary"),
                    _conf->version,
                    MOD_CONFIG_FILE_VERSION))
      _conf_free();
