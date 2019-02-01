@@ -2,8 +2,7 @@
 
 Module based on Spellcheck plugin for Launcher module.
 
-Spellcheck module inspired me to create this module. The main goal is 
-to have a quick access to dictionary via Launcher module in Bodhi GNU/Linux.
+Spellcheck module inspired me to create this module. The main goal is to have a quick access to dictionary via Launcher module in Bodhi GNU/Linux.
 
 
 <p align="center">
