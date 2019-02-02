@@ -43,15 +43,15 @@ struct _Module_Config
 static char *commands[] =
   {
     "sdcv %s",
-    "sdcv %s",
+    "sdcv -n %s",
   };
 
 static const Evry_API *evry = NULL;
 static Evry_Module *evry_module = NULL;
 static Module_Config *_conf;
 static Evry_Plugin *_plug = NULL;
-static char _config_path[] =  "launcher/everything-aspell";
-static char _config_domain[] = "module.everything-aspell";
+static char _config_path[] =  "launcher/everything-dict";
+static char _config_domain[] = "module.everything-dict";
 static char _module_icon[] = "accessories-dictionary";
 static E_Config_DD *_conf_edd = NULL;
 
@@ -108,10 +108,12 @@ _exe_restart(Plugin *p)
    lang_val = "";
      }
 
+  
    len = snprintf(cmd, sizeof(cmd),
         commands[_conf->command - 1],
         lang_opt, lang_val);
-   printf("cmd je: %s\n", cmd);     
+   
+     printf("CMD je: %s\n",cmd);
    if (len >= (int)sizeof(cmd))
      return 0;
 
@@ -167,7 +169,8 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
    if(strstr(word, "Found") != NULL) return;
    
    snprintf(cmd, sizeof(cmd), "-->%s", p->input);
-   if(strstr(word, cmd) != NULL) return;
+   if (strstr(word, cmd) != NULL) return;
+   
    if ((*word) != 0) {
        it->label = eina_stringshare_add_length(word, word_size);
        EVRY_PLUGIN_ITEM_APPEND(p, it);
@@ -215,6 +218,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    Ecore_Exe_Event_Data *e = event;
    Ecore_Exe_Event_Data_Line *l;
    const char *word;
+   
 
    if (e->exe != p->exe)
      return ECORE_CALLBACK_PASS_ON;
@@ -237,29 +241,15 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    word_end = _space_find(word);
    word_size = word_end - word;
 
-   //~ switch (l->line[0])
-     //~ {
-      //~ case '*':
-         //~ _item_add(p, word, word_size, 1);
-         //~ break;
-      //~ case '&':
-         //~ _item_add(p, word, word_size, 1);
-         _suggestions_add(p, l->line);
-         //~ break;
-      //~ case '#':
-         //~ break;
-      //~ case '\0':
-         //~ break;
-      //~ default:
-         //~ ERR("ASPELL: unknown output: '%s'", l->line);
-     //~ }
+   _suggestions_add(p, l->line);
 
    if (*word_end)
      word = _space_skip(word_end + 1);
      }
-
+     
+  
    if (p->base.items)
-     EVRY_PLUGIN_UPDATE(p, EVRY_UPDATE_ADD);
+    EVRY_PLUGIN_UPDATE(p, EVRY_UPDATE_ADD);
 
    return ECORE_CALLBACK_PASS_ON;
 }
@@ -298,6 +288,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
    GET_PLUGIN(p, plugin);
    const char *s;
    unsigned int len;
+   unsigned int inp_len;
 
    if (!input) return 0;
 
@@ -364,6 +355,13 @@ _fetch(Evry_Plugin *plugin, const char *input)
    len = s - input + 1;
    if (len < 1)
      return 0;
+   
+   inp_len = strlen(input)-1;
+   printf("Slovo je: %s %d\n", input, *(input + inp_len));
+   if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
+        input = input + inp_len;        
+	}
+  
    input = eina_stringshare_add_length(input, len);
    IF_RELEASE(p->input);
    if (p->input == input)
