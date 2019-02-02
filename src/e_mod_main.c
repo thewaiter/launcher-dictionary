@@ -178,7 +178,6 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    Ecore_Exe_Event_Data *e = event;
    Ecore_Exe_Event_Data_Line *l;
    const char *word;
-   
 
    if (e->exe != p->exe)
      return ECORE_CALLBACK_PASS_ON;
@@ -269,40 +268,6 @@ _fetch(Evry_Plugin *plugin, const char *input)
 
    if (!_exe_restart(p))
      return 0;
-     }
-
-   len = sizeof(LANG_MODIFIER) - 1;
-   if (strncmp(input, LANG_MODIFIER, len) == 0)
-     {
-   const char *lang;
-
-   EVRY_PLUGIN_ITEMS_FREE(p);
-
-   input += len;
-   for (s = input; *s != '\0'; s++)
-     if (isspace(*s) || *s == ';')
-       break;
-
-   if (*s == '\0') /* just apply language on ' ' or ';' */
-     return 0;
-
-   if (s - input > 0)
-     lang = eina_stringshare_add_length(input, s - input);
-   else
-     lang = NULL;
-
-   if (p->lang) eina_stringshare_del(p->lang);
-   if (p->lang != lang)
-     {
-        p->lang = lang;
-        if (!_exe_restart(p))
-          return 1;
-     }
-
-   if (*s == '\0')
-     return 0;
-
-   input = s + 1;
      }
 
    input = _space_skip(input);
