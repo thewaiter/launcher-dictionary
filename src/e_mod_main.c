@@ -3,7 +3,6 @@
 #include "evry_api.h"
 
 #define CMD_ASPELL   1
-#define CMD_HUNSPELL 2
 
 typedef struct _Plugin Plugin;
 typedef struct _Module_Config Module_Config;
@@ -43,7 +42,6 @@ struct _Module_Config
 static char *commands[] =
   {
     "sdcv %s",
-    "sdcv -n %s",
   };
 
 static const Evry_API *evry = NULL;
@@ -73,11 +71,6 @@ _exe_restart(Plugin *p)
         lang_opt = "-n";
         lang_val = p->lang;
      }
-   else if (_conf->command == CMD_HUNSPELL)
-     {
-        lang_opt = "-d";
-        lang_val = p->lang;
-     }
    else
      {
         lang_opt = "";
@@ -89,11 +82,6 @@ _exe_restart(Plugin *p)
    if (_conf->command == CMD_ASPELL)
      {
         lang_opt = "-e";
-        lang_val = _conf->lang;
-     }
-   else if (_conf->command == CMD_HUNSPELL)
-     {
-        lang_opt = "-n";
         lang_val = _conf->lang;
      }
    else
@@ -180,35 +168,7 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
 static void
 _suggestions_add(Plugin *p, const char *line)
 {
-   //~ const char *s;
-
-   //~ s = strchr(line, ':');
-   //~ if (!s)
-     //~ {
-   //~ ERR("ASPELL: ERROR missing suggestion delimiter: '%s'", line);
-   //~ return;
-     //~ }
-   //~ s=line;
-   //~ s++;
-
-   //~ line = _space_skip(s);
-   //~ while (*line)
-     //~ {
-   //~ int len;
-
-   //~ s = strchr(line, ',');
-   //~ if (s)
-     //~ len = s - line;
-   //~ else
-     //~ len = strlen(line);
-
    _item_add(p, line, 100, 1);
-
-   //~ if (s)
-     //~ line = _space_skip(s + 1);
-   //~ else
-     //~ break;
-     //~ }
 }
 
 static Eina_Bool
@@ -469,7 +429,7 @@ _conf_dialog(E_Container *con, const char *params __UNUSED__)
    v->basic.create_widgets = _basic_create;
    v->basic.apply_cfdata = _basic_apply;
 
-   cfd = e_config_dialog_new(con, _("Spell Checker"),
+   cfd = e_config_dialog_new(con, _("Dictionary"),
               _config_path, _config_path, _module_icon, 0, v, NULL);
 
    _conf->cfd = cfd;
@@ -488,17 +448,14 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
 
    rg = e_widget_radio_group_new(&cfdata->command);
 
-   ow = e_widget_label_add(evas, _("Spell checker"));
+   ow = e_widget_label_add(evas, _("Dictionary"));
    e_widget_framelist_object_append(of, ow);
 
-   ow = e_widget_radio_add(evas, _("Aspell"), 1, rg);
-   e_widget_framelist_object_append(of, ow);
-
-   ow = e_widget_radio_add(evas, _("Hunspell"), 2, rg);
+   ow = e_widget_radio_add(evas, _("Stardict"), 1, rg);
    e_widget_framelist_object_append(of, ow);
 
    ow = e_widget_radio_add(evas, _("Custom"), 0, rg);
-   e_widget_disabled_set(ow, 1);
+   e_widget_disabled_set(ow, 0);
    e_widget_framelist_object_append(of, ow);
 
    ow = e_widget_label_add(evas, _("Custom Command"));
