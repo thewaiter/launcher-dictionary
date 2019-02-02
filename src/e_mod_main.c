@@ -42,7 +42,7 @@ struct _Module_Config
 static char *engines[] =
   {
     "sdcv %s",
-    ""
+    "cust %s "
   };
 
 static const Evry_API *evry = NULL;
@@ -60,45 +60,19 @@ static Eina_Bool
 _exe_restart(Plugin *p)
 {
    char cmd[1024];
-   const char *command_opt, *command_val;
+   const char *command_val;
    int len;
 
    if (p->command && (p->command[0] != '\0'))
-     {
-   if (_conf->engine == STARDICT)
-     {
-        command_opt = "-n";
-        command_val = p->command;
-     }
-   else
-     {
-        command_opt = "";
-        command_val = "";
-     }
-     }
+       command_val = p->command;
    else if (_conf->command)
-     {
-   if (_conf->engine == STARDICT)
-     {
-        command_opt = "-e";
-        command_val = _conf->command;
-     }
+       command_val = _conf->command;
    else
-     {
-        command_opt = "";
-        command_val = "";
-     }
-     }
-   else
-     {
-   command_opt = "";
-   command_val = "";
-     }
+       command_val = "";
 
   
    len = snprintf(cmd, sizeof(cmd),
-        engines[_conf->engine - 1],
-        command_opt, command_val);
+        engines[_conf->engine - 1], command_val);
    
      printf("CMD je: %s\n",cmd);
    if (len >= (int)sizeof(cmd))
