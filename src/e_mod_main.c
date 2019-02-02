@@ -2,7 +2,7 @@
 #include "e_mod_main.h"
 #include "evry_api.h"
 
-#define CMD_ASPELL   1
+#define STARDICT   1
 
 typedef struct _Plugin Plugin;
 typedef struct _Module_Config Module_Config;
@@ -27,21 +27,22 @@ struct _Module_Config
 
   const char *lang;
   const char *custom;
-  int command;
+  int engine;
 
   E_Config_Dialog *cfd;
   E_Module *module;
 };
 
-//~ static char *commands[] =
+//~ static char *engines[] =
   //~ {
     //~ "aspell -a --encoding=UTF-8 %s %s",
     //~ "hunspell -a -i utf-8 %s %s"
   //~ };
 
-static char *commands[] =
+static char *engines[] =
   {
     "sdcv %s",
+    ""
   };
 
 static const Evry_API *evry = NULL;
@@ -52,9 +53,7 @@ static char _config_path[] =  "launcher/everything-dict";
 static char _config_domain[] = "module.everything-dict";
 static char _module_icon[] = "accessories-dictionary";
 static E_Config_DD *_conf_edd = NULL;
-
 static const char TRIGGER[] = "d ";
-static const char LANG_MODIFIER[] = "lang=";
 static int instances = 0;
 
 static Eina_Bool
@@ -66,7 +65,7 @@ _exe_restart(Plugin *p)
 
    if (p->lang && (p->lang[0] != '\0'))
      {
-   if (_conf->command == CMD_ASPELL)
+   if (_conf->engine == STARDICT)
      {
         lang_opt = "-n";
         lang_val = p->lang;
@@ -79,7 +78,7 @@ _exe_restart(Plugin *p)
      }
    else if (_conf->lang)
      {
-   if (_conf->command == CMD_ASPELL)
+   if (_conf->engine == STARDICT)
      {
         lang_opt = "-e";
         lang_val = _conf->lang;
@@ -98,7 +97,7 @@ _exe_restart(Plugin *p)
 
   
    len = snprintf(cmd, sizeof(cmd),
-        commands[_conf->command - 1],
+        engines[_conf->engine - 1],
         lang_opt, lang_val);
    
      printf("CMD je: %s\n",cmd);
@@ -366,7 +365,7 @@ _plugins_shutdown(void)
 
 struct _E_Config_Dialog_Data
 {
-  int  command;
+  int  engine;
   char *custom;
   char *lang;
 };
@@ -411,25 +410,25 @@ _basic_create(E_Config_Dialog *cfd __UNUSED__, Evas *evas, E_Config_Dialog_Data 
    of = e_widget_framelist_add(evas, _("General"), 0);
    e_widget_framelist_content_align_set(of, 0.0, 0.0);
 
-   rg = e_widget_radio_group_new(&cfdata->command);
+   rg = e_widget_radio_group_new(&cfdata->engine);
 
-   ow = e_widget_label_add(evas, _("Dictionary"));
+   ow = e_widget_label_add(evas, _("Dictionary CLI client"));
    e_widget_framelist_object_append(of, ow);
 
-   ow = e_widget_radio_add(evas, _("Stardict"), 1, rg);
+   ow = e_widget_radio_add(evas, _("Stardict (default)"), 1, rg);
    e_widget_framelist_object_append(of, ow);
 
    ow = e_widget_radio_add(evas, _("Custom"), 0, rg);
    e_widget_disabled_set(ow, 0);
    e_widget_framelist_object_append(of, ow);
 
-   ow = e_widget_label_add(evas, _("Custom Command"));
+   ow = e_widget_label_add(evas, _("Custom client name"));
    e_widget_framelist_object_append(of, ow);
    ow = e_widget_entry_add(evas, &cfdata->custom, NULL, NULL, NULL);
-   e_widget_disabled_set(ow, 1);
+   e_widget_disabled_set(ow, 0);
    e_widget_framelist_object_append(of, ow);
 
-   ow = e_widget_label_add(evas, _("Language"));
+   ow = e_widget_label_add(evas, _("Client engines"));
    e_widget_framelist_object_append(of, ow);
    ow = e_widget_entry_add(evas, &cfdata->lang, NULL, NULL, NULL);
    e_widget_framelist_object_append(of, ow);
@@ -462,7 +461,7 @@ _fill_data(E_Config_Dialog_Data *cfdata)
 {
 #define CP(_name) cfdata->_name = _conf->_name ? strdup(_conf->_name) : strdup("");
 #define C(_name) cfdata->_name = _conf->_name;
-   C(command);
+   C(engine);
    CP(custom);
    CP(lang);
 #undef CP
@@ -477,7 +476,7 @@ _basic_apply(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
      eina_stringshare_del(_conf->_name);     \
    _conf->_name = eina_stringshare_add(cfdata->_name);
 #define C(_name) _conf->_name = cfdata->_name;
-   C(command);
+   C(engine);
    CP(custom);
    CP(lang);
 #undef CP
@@ -499,9 +498,9 @@ _conf_new(void)
 
    /* setup defaults */
    IFMODCFG(0x008d);
-   _conf->command = 1;
+   _conf->engine = 1;
    _conf->custom = NULL;
-   _conf->lang = eina_stringshare_add("en_US");
+   _conf->lang = eina_stringshare_add("-e");
    IFMODCFGEND;
 
    _conf->version = MOD_CONFIG_FILE_VERSION;
@@ -540,7 +539,7 @@ _conf_init(E_Module *m)
 #define T Module_Config
 #define D _conf_edd
    E_CONFIG_VAL(D, T, version, INT);
-   E_CONFIG_VAL(D, T, command, INT);
+   E_CONFIG_VAL(D, T, engine, INT);
    E_CONFIG_VAL(D, T, custom, STR);
    E_CONFIG_VAL(D, T, lang, STR);
 #undef T
