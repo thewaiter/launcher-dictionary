@@ -98,14 +98,6 @@ _space_skip(const char *line)
    return line;
 }
 
-static const char *
-_space_find(const char *line)
-{
-   for (; *line != '\0'; line++)
-     if (isspace(*line))
-       break;
-   return line;
-}
 
 static Evas_Object *
 _icon_get(Evry_Item *it, Evas *e)
@@ -114,7 +106,7 @@ _icon_get(Evry_Item *it, Evas *e)
              o = e_icon_add(e);
              e_util_icon_theme_set(o, "accessories-dictionary");
         return o;
-     }
+}
 
 
 static void
@@ -170,13 +162,9 @@ _cb_data(void *data, int type __UNUSED__, void *event)
         continue;
      }
 
-   word_end = _space_find(word);
-   word_size = word_end - word;
 
    _suggestions_add(p, l->line);
 
-   if (*word_end)
-     word = _space_skip(word_end + 1);
      }
      
   
