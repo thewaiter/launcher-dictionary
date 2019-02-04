@@ -22,7 +22,7 @@ This module depends on sdcv utility. It is a console Stardict application.
 sdcv installing:
 sudo apt-get install sdcv
 
-Unpack downloaded dicts and copy to /usr/share/stardict/dict directory
+Unpack downloaded dicts and copy to /usr/share/stardict/dic directory
 
 # Usage
 
