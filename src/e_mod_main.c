@@ -2,6 +2,7 @@
 #include "e_mod_main.h"
 #include "evry_api.h"
 
+#define WRAP 50
 #define STARDICT   1
 
 typedef struct _Plugin Plugin;
@@ -32,12 +33,6 @@ struct _Module_Config
   E_Config_Dialog *cfd;
   E_Module *module;
 };
-
-//~ static char *engines[] =
-  //~ {
-    //~ "aspell -a --encoding=UTF-8 %s %s",
-    //~ "hunspell -a -i utf-8 %s %s"
-  //~ };
 
 static char *engines[] =
   {
@@ -114,7 +109,7 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
 {
    Evry_Item *it;
    char cmd[30];
-   
+       
    it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _icon_get, NULL);
    if (!it) return;
    it->priority = prio;
@@ -124,16 +119,28 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
    snprintf(cmd, sizeof(cmd), "-->%s", p->input);
    if (strstr(word, cmd) != NULL) return;
    
-   if ((*word) != 0) {
-       it->label = eina_stringshare_add_length(word, word_size);
-       EVRY_PLUGIN_ITEM_APPEND(p, it);
-   }
+	   if ((*word) != 0) {
+		   it->label = eina_stringshare_add_length(word, word_size);
+		   EVRY_PLUGIN_ITEM_APPEND(p, it);
+	   }
+  	   
 }
+
 
 static void
 _suggestions_add(Plugin *p, const char *line)
 {
-   _item_add(p, line, 100, 1);
+	const char *s;
+	int len, i;
+	
+	len = strlen(line);
+	s = line;
+	
+	//~ _item_add(p, s, 300, 1);
+	for (i=1; i<= len/WRAP; i++)
+	{
+     _item_add(p, s + i*WRAP, WRAP, 1);
+    } 
 }
 
 static Eina_Bool
@@ -155,19 +162,15 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    const char *word_end;
    int word_size;
 
-   if (p->is_first)
-     {
-        ERR("DICT: %s", l->line);
-        p->is_first = 0;
-        continue;
-     }
-
-
-   _suggestions_add(p, l->line);
-
+	   if (p->is_first)
+		 {
+			ERR("DICT: %s", l->line);
+			p->is_first = 0;
+			continue;
+		 }
+     _suggestions_add(p, l->line);
      }
      
-  
    if (p->base.items)
     EVRY_PLUGIN_UPDATE(p, EVRY_UPDATE_ADD);
 
@@ -212,12 +215,6 @@ _fetch(Evry_Plugin *plugin, const char *input)
 
    if (!input) return 0;
 
-   //~ if (strlen(input) < plugin->config->min_query)
-     //~ {
-   //~ EVRY_PLUGIN_ITEMS_FREE(p);
-   //~ return 0;
-     //~ }
-
    if (!p->handler.data)
      {
    if (!p->handler.data)
@@ -243,7 +240,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
      return 0;
    
    inp_len = strlen(input)-1;
-   printf("Slovo je: %s %d\n", input, *(input + inp_len));
+   printf("Word is: %s %d\n", input, *(input + inp_len));
    if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
         input = input + inp_len;        
 	}
@@ -257,7 +254,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
    if (!p->exe) return 0;
 
    ecore_exe_send(p->exe, (char *)p->input, len);
-   ecore_exe_send(p->exe, "\n", 1);
+   ecore_exe_send(p->exe, "\n", 1); //this means the enter key press send to the prog.
 
    return 0;
 }
