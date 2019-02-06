@@ -103,28 +103,35 @@ _icon_get(Evry_Item *it, Evas *e)
         return o;
 }
 
+static Evas_Object *
+_no_icon_get(Evry_Item *it, Evas *e)
+{
+   Evas_Object *o = NULL;
+             o = e_icon_add(e);
+             e_util_icon_theme_set(o, "");
+        return o;
+}
 
 static void
 _item_add(Plugin *p, const char *word, int word_size, int prio)
 {
    Evry_Item *it;
    char cmd[30];
-       
-       
-   it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _icon_get, NULL);
-   if (!it) return;
-   it->priority = prio;
    
    if(strstr(word, "Found") != NULL) return;
    
    snprintf(cmd, sizeof(cmd), "-->%s", p->input);
-   if (strstr(word, cmd) != NULL) return;
+   if (strstr(word, cmd) != NULL)  return;
+      
+   if (strstr(word, "-->") != NULL) 
+      it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _icon_get, NULL);
+   else 
+      it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _no_icon_get, NULL);
    
-	   if ((*word) != 0) {
-		   it->label = eina_stringshare_add_length(word, word_size);
-		   EVRY_PLUGIN_ITEM_APPEND(p, it);
-	   }
-  	   
+   if (!it) return;
+   it->priority = prio;
+   it->label = eina_stringshare_add_length(word, word_size);
+   EVRY_PLUGIN_ITEM_APPEND(p, it);
 }
 
 
@@ -132,16 +139,19 @@ static void
 _suggestions_add(Plugin *p, const char *line)
 {
 	const char *s, *right_margin;
-	int length, i;
+	int length;
 	
 	length = strlen(line);
 	s = line;
 	
-	
 	 //~ _item_add(p, "<font_size= 20> ahoj </font_size>", WRAP, 1); idea for text formating
 	
-		
-	 while(*s)
+	//word wrap adapted from	https://c-for-dummies.com/blog/?p=682
+	
+	//~ _item_add(p, s, 300, 1);
+	 //~ s = s + WRAP;
+	 
+	 while(*s) 
     {
         if(length <= WRAP)
         {
@@ -166,14 +176,7 @@ _suggestions_add(Plugin *p, const char *line)
         _item_add(p, s, right_margin - s, 1); ;
         length -= right_margin-s+1;      /* +1 for the space */
         s = right_margin + 1;
-    }
-
-	//~ for (i=0; i<= len/WRAP; i++)
-	//~ {
-     //~ _item_add(p, s + i*WRAP, WRAP, 1);
-    //~ } 
-    
-    
+    }    
 }
 
 static Eina_Bool
