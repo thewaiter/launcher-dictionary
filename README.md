@@ -42,12 +42,12 @@ Enjoy :)
 
 To-Do
 
-[x] Line word wrapping
-[ ] Line word wrapping size according the Launcher window width
-[x] Line icon only if dict name 
-[x] Short text width in some themes - fixed in evrything.edc (e.text.detail)
-[ ] Text formating (color, size)
-[ ] Copying the whole block of text, not just one line
-[ ] Send the number value to the console when * follows the word
-[ ] Better README.md file
+ - [x] Line word wrapping
+ - [ ] Line word wrapping size according the Launcher window width
+ - [x] Line icon only if dict name 
+ - [x] Short text width in some themes - fixed in evrything.edc (e.text.detail)
+ - [ ] Text formating (color, size)
+ - [ ] Copying the whole block of text, not just one line
+ - [ ] Send the number value to the console when * follows the word
+ - [ ] Better README.md file
 
