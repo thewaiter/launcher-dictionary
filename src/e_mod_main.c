@@ -110,6 +110,7 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
    Evry_Item *it;
    char cmd[30];
        
+       
    it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _icon_get, NULL);
    if (!it) return;
    it->priority = prio;
@@ -130,17 +131,49 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
 static void
 _suggestions_add(Plugin *p, const char *line)
 {
-	const char *s;
-	int len, i;
+	const char *s, *right_margin;
+	int length, i;
 	
-	len = strlen(line);
+	length = strlen(line);
 	s = line;
 	
-	//~ _item_add(p, s, 300, 1);
-	for (i=1; i<= len/WRAP; i++)
-	{
-     _item_add(p, s + i*WRAP, WRAP, 1);
-    } 
+	
+	 //~ _item_add(p, "<font_size= 20> ahoj </font_size>", WRAP, 1); idea for text formating
+	
+		
+	 while(*s)
+    {
+        if(length <= WRAP)
+        {
+           _item_add(p, s, WRAP, 1);     /* display string */
+            return;      /* and leave */
+        }
+        right_margin = s + WRAP;
+        while(!isspace(*right_margin))
+        {
+            right_margin--;
+            if( right_margin == s)
+            {
+                right_margin += WRAP;
+                while(!isspace(*right_margin))
+                {
+                    if( *right_margin == '\0')
+                        break;
+                    right_margin++;
+                }
+            }
+        }
+        _item_add(p, s, right_margin - s, 1); ;
+        length -= right_margin-s+1;      /* +1 for the space */
+        s = right_margin + 1;
+    }
+
+	//~ for (i=0; i<= len/WRAP; i++)
+	//~ {
+     //~ _item_add(p, s + i*WRAP, WRAP, 1);
+    //~ } 
+    
+    
 }
 
 static Eina_Bool
@@ -240,7 +273,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
      return 0;
    
    inp_len = strlen(input)-1;
-   printf("Word is: %s %d\n", input, *(input + inp_len));
+   //~ printf("Word is: %s %d\n", input, *(input + inp_len));
    if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
         input = input + inp_len;        
 	}
