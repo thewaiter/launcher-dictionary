@@ -127,7 +127,7 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
       it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _icon_get, NULL);
    else 
       it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _no_icon_get, NULL);
-   
+   //~ it->browseable = EINA_TRUE;
    if (!it) return;
    it->priority = prio;
    it->label = eina_stringshare_add_length(word, word_size);
@@ -144,13 +144,9 @@ _suggestions_add(Plugin *p, const char *line)
 	length = strlen(line);
 	s = line;
 	
-	 //~ _item_add(p, "<font_size= 20> ahoj </font_size>", WRAP, 1); idea for text formating
 	
 	//word wrap adapted from	https://c-for-dummies.com/blog/?p=682
 	
-	//~ _item_add(p, s, 300, 1);
-	 //~ s = s + WRAP;
-	 
 	 while(*s) 
     {
         if(length <= WRAP)
@@ -186,7 +182,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    Ecore_Exe_Event_Data *e = event;
    Ecore_Exe_Event_Data_Line *l;
    const char *word;
-
+ 
    if (e->exe != p->exe)
      return ECORE_CALLBACK_PASS_ON;
 
@@ -195,9 +191,6 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    word = p->input;
    for (l = e->lines; l && l->line; l++)
      {
-   const char *word_end;
-   int word_size;
-
 	   if (p->is_first)
 		 {
 			ERR("DICT: %s", l->line);
@@ -240,6 +233,13 @@ _begin(Evry_Plugin *plugin, const Evry_Item *it __UNUSED__)
 
    return EVRY_PLUGIN(p);
 }
+
+static int
+_action(Evry_Action *act)
+{
+   char *tmp = evry->util_url_unescape(act->it1.item->label, 0);
+   printf("This is an action %s\n", tmp);
+ }    
 
 static int
 _fetch(Evry_Plugin *plugin, const char *input)
@@ -288,11 +288,11 @@ _fetch(Evry_Plugin *plugin, const char *input)
 
    p->input = input;
    if (!p->exe) return 0;
-
+   
    ecore_exe_send(p->exe, (char *)p->input, len);
    ecore_exe_send(p->exe, "\n", 1); //this means the enter key press send to the prog.
 
-   return 0;
+   return EVRY_PLUGIN_HAS_ITEMS(p);
 }
 
 static void
@@ -315,7 +315,6 @@ _finish(Evry_Plugin *plugin)
    ecore_exe_quit(p->exe);
    ecore_exe_free(p->exe);
      }
-
    IF_RELEASE(p->command);
    IF_RELEASE(p->input);
 
@@ -326,6 +325,7 @@ static int
 _plugins_init(const Evry_API *_api)
 {
    evry = _api;
+   Evry_Action *act;
 
    if (!evry->api_version_check(EVRY_API_VERSION))
      return EINA_FALSE;
@@ -346,6 +346,17 @@ _plugins_init(const Evry_API *_api)
    pc->trigger_only = EINA_TRUE;
    pc->min_query = 1;
      }
+   
+   #define ACTION_NEW(_name, _type, _icon, _action, _check, _method)	\
+   act = EVRY_ACTION_NEW(_name, _type, 0, _icon, _action, _check);	\
+   act->remember_context = EINA_TRUE;					\
+   EVRY_ITEM_DATA_INT_SET(act, _method);				\
+   EVRY_ITEM(act)->icon_get = &_icon_get;				\
+   evry->action_register(act, 0);				       	\
+   //~ actions = eina_list_append(actions, act);				\
+   
+    ACTION_NEW(N_("Select"), EVRY_TYPE_TEXT, "edit-find",
+	      _action, NULL, NULL);
 
    return EINA_TRUE;
 }
