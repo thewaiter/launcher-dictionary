@@ -1,9 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: launcher-spellchecker
-Source: https://github.com/rbtylee/launcher-spellchecker
+Upstream-Name: launcher-dictionary
+Source: https://github.com/thewaiter/launcher-dictionary 
 
 Files: *
-Copyright: 2019 Robert Wiley <ylee@bodhilinux.com>
+Copyright: 2020 Stefan Uram <thewaiter@centrum.sk>
 License: Expat-custom
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in
@@ -38,7 +38,7 @@ License: Expat-custom
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Files: debian/*
-Copyright: 2019 Robert Wiley <ylee@bodhilinux.com>
+Copyright: 2020 Stefan Uram <thewaiter@centrum.sk>
 License: GPL-3.0+
 
 License: GPL-3.0+

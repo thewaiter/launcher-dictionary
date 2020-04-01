@@ -1,72 +1,53 @@
-moksha-module-spellchecker for Debian
-------------------------------------
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/paypalme/rbtylee)
+# Launcher-Dictionary
 
-# Launcher Spell checker
+Module based on Spellcheck plugin for Launcher module.
 
-This is a plugin for [Moksha's](https://github.com/JeffHoogland/moksha) Quick Launcher to check the spelling of words using aspell as a backend.
-
-It is a resurrection of the old e17 [*everything-aspell module*](https://git.enlightenment.org/legacy/subversion-history.git/tree/trunk/E-MODULES-EXTRA/everything-aspell) *with only minor [Bodhi](https://www.bodhilinux.com/) specific changes*. With enough demand, support and time willing I plan on taking over maintaining this module as it is currently unmaintained but rather cool.
+Spellcheck module inspired me to create this module. The main goal is to have a quick access to dictionary via Launcher module in Bodhi GNU/Linux.
 
 
 <p align="center">
-  <img src="https://i.imgur.com/WSQErOl.png" alt="Screen Shot">
+  <img src="http://www.enlightenment.org/ss/e-5c546dd0973cc5.02130478.png" alt="Screen Shot">
 </p>
 
-# Dependencies
 
-* The usual build tools, autopoint libtool intltool pkg-config  autotools-dev
+# Dependecies
+
 * [EFL](https://www.enlightenment.org/download)
 * [Moksha](https://github.com/JeffHoogland/moksha)
-* [aspell](http://aspell.net/)
-* aspell-en (optional)
+* [sdcv](https://wiki.archlinux.org/index.php/Sdcv)
+* [stardict dictionaries](https://sites.google.com/site/gtonguedict/home/stardict-dictionaries)
 
-**Note:** 
->The default aspell dictinary is english (aspell-en). You can, of course, use other dictionaries with this module.
->However before they are available you need to change the dictionary in the module settings. You must have at least one dictionary installed to use the spell checking functionality.
+This module depends on sdcv utility. It is a console Stardict application.
+
+sdcv installing:
+sudo apt-get install sdcv
+
+Unpack downloaded dicts and copy to /usr/share/stardict/dic directory
 
 # Usage
 
-*Coming Soon*
+First one must load the module in modules settings under Launcher tab. Now assuming one has sdcv installed and an stardict dictionary, then usage should be as simple as opening Mokshas Quick Launcher and typing 'd ' without the single quote marks. Note: one must type the blank following the d. The prompt will change to a colon and now type a word that should be translated. A list as pictured above will be displayed.
+Press "CTRL + u" key combination for the new word searching. 
 
-# Installation
+# Module authors:
 
-It is recommended Bodhi users install from Bodhi's repo:
-
-```ShellSession
-sudo apt update
-sudo apt install moksha-module-spellcheck
-```
-
-Other users need to compile the code:
-
-First install all the needed dependencies. Note this includes not only EFL but the EFL header files as well as the [e_dbus](https://git.enlightenment.org/legacy/e_dbus.git/) header files. If you have compiled and installed EFL, edbus and Moksha from source code this should be no problem. 
-
-Then the usual:
-
-```ShellSession
-./autogen.sh
-make
-sudo make install
-```
-
-# Support This Project
-
-*Coming soon*
-
-# Credits
-
-Full credit for the orginal code of this module go the enlightenment developers:
+Full credit for the original code of this module go the enlightenment developers:
 * Gustavo Barbieri
 * Hannes Janetzek
 
-and any others than may have committed on this module.
+Dictionary part
+* Štefan Uram a.k.a the_waiter <Bodhi Linux developer> (c) 2019
 
-<p align="center">
-  <i>I Stand on the shoulders of giants.</a>
-</p>
+Enjoy :)
 
+To-Do
 
-
- -- Robert <Jeff Hoogland <jeffhoogland@gmail.com>>  Mon, 28 Jan 2019 04:37:13 -0500
+ - [x] Line word wrapping
+ - [ ] Line word wrapping size according the Launcher window width
+ - [x] Line icon only if dict name 
+ - [x] Short text width in some themes - fixed in evrything.edc (e.text.detail)
+ - [ ] Text formating (color, size)
+ - [ ] Copying the whole block of text, not just one line
+ - [ ] Send the number value to the console when * follows the word
+ - [ ] Better README.md file
 

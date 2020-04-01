@@ -1,25 +1,23 @@
-Source: moksha-module-spellchecker
+Source: moksha-module-dictionary
 Section: utils
 Priority: optional
-Maintainer: Robert Wiley <ylee@bodhilinux.com>
+Maintainer: Stefan Uram <thewaiter@centrum.sk>
 Build-Depends: debhelper (>= 10), autotools-dev, libc6 (>= 2.4),  autopoint, libtool, intltool, pkg-config, libefl-dev, libedbus-dev,  moksha,
 Standards-Version: 4.1.2
-Homepage: https://github.com/rbtylee/launcher-spellchecker
-#Vcs-Git: https://anonscm.debian.org/git/collab-maint/moksha-module-spellchecker.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/moksha-module-spellchecker.git
+Homepage: https://github.com/thewaiter/launcher-dictionary
 
-Package: moksha-module-spellchecker
+Package: moksha-module-dictionary
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, aspell
+Depends: ${shlibs:Depends}, ${misc:Depends}, sdcv
 Recommends: hunspell, aspell-en, hunspell-en-us
-Description: Spell Checker plugin for Moksha Quick launcher
- Launcher-spellchecker is a plugin for Moksha's Quick Launcher to check 
- the spelling of words using aspell or hunspell as a backend.
+Description: Dictionary plugin for Moksha Quick launcher
+ Launcher-dictionary is a plugin for Moksha's Quick Launcher to  
+ translate words using stardict CLI sdcv tool a backend.
  .
- It is a resurrection of the old e17 everything-aspell module with only 
- minor Bodhi specific changes.
+ It is based on the old e17 everything-aspell module with sdcv 
+ support.
  .
- Note: you must install a dictionary for aspell or hunspell 
+ Note: you must install some Stardict dictionary for sdcv 
  for full functionality.
  .
- Source: https://github.com/rbtylee/launcher-spellchecker
+ Source: https://github.com/thewaiter/launcher-dictionary

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2019-01-29 23:05+0100\n"
+"POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,46 +17,50 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:391 src/e_mod_main.c:449 src/e_mod_main.c:587
-msgid "Spell Checker"
+#: src/e_mod_main.c:333 src/e_mod_main.c:402
+msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:463
+#: src/e_mod_main.c:358
+msgid "Select"
+msgstr ""
+
+#: src/e_mod_main.c:416
 msgid "General"
 msgstr ""
 
-#: src/e_mod_main.c:468
-msgid "Spell checker"
+#: src/e_mod_main.c:421
+msgid "Dictionary engines"
 msgstr ""
 
-#: src/e_mod_main.c:471
-msgid "Aspell"
+#: src/e_mod_main.c:424
+msgid "Stardict (default)"
 msgstr ""
 
-#: src/e_mod_main.c:474
-msgid "Hunspell"
-msgstr ""
-
-#: src/e_mod_main.c:477
+#: src/e_mod_main.c:427
 msgid "Custom"
 msgstr ""
 
-#: src/e_mod_main.c:481
-msgid "Custom Command"
+#: src/e_mod_main.c:431
+msgid "Custom engine"
 msgstr ""
 
-#: src/e_mod_main.c:487
-msgid "Language"
+#: src/e_mod_main.c:437
+msgid "Engine command"
 msgstr ""
 
-#: src/e_mod_main.c:585
+#: src/e_mod_main.c:535
 msgid "Launcher"
 msgstr ""
 
-#: src/e_mod_main.c:587
+#: src/e_mod_main.c:537
 msgid "Launcher Plugin"
 msgstr ""
 
-#: src/e_mod_main.c:606
-msgid "Everything Aspell"
+#: src/e_mod_main.c:537
+msgid "Launcher Dictionary"
+msgstr ""
+
+#: src/e_mod_main.c:556
+msgid "Everything Dictionary"
 msgstr ""

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker VERSION\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2019-01-27 07:08-0500\n"
+"POT-Creation-Date: 2019-02-01 14:20+0100\n"
 "PO-Revision-Date: 2013-02-01 09:52+0100\n"
 "Last-Translator: Marc Furtià i Puig <marc.furtia@gmail.com>\n"
 "Language-Team: \n"
@@ -14,48 +14,56 @@ msgstr ""
 "X-Poedit-Bookmarks: -1,-1,1139,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: src/e_mod_main.c:391 src/e_mod_main.c:449 src/e_mod_main.c:587
+#: src/e_mod_main.c:408
+msgid "Dictionary"
+msgstr ""
+
+#: src/e_mod_main.c:466
 msgid "Spell Checker"
 msgstr "Corrector ortogràfic"
 
-#: src/e_mod_main.c:463
+#: src/e_mod_main.c:480
 msgid "General"
 msgstr "General"
 
-#: src/e_mod_main.c:468
+#: src/e_mod_main.c:485
 msgid "Spell checker"
 msgstr "Corrector ortogràfic"
 
-#: src/e_mod_main.c:471
+#: src/e_mod_main.c:488
 msgid "Aspell"
 msgstr "Aspell"
 
-#: src/e_mod_main.c:474
+#: src/e_mod_main.c:491
 msgid "Hunspell"
 msgstr "Hunspell"
 
-#: src/e_mod_main.c:477
+#: src/e_mod_main.c:494
 msgid "Custom"
 msgstr "Personalitzar "
 
-#: src/e_mod_main.c:481
+#: src/e_mod_main.c:498
 msgid "Custom Command"
 msgstr "Comanda personalitzada "
 
-#: src/e_mod_main.c:487
+#: src/e_mod_main.c:504
 msgid "Language"
 msgstr "Llengua"
 
-#: src/e_mod_main.c:585
+#: src/e_mod_main.c:602
 msgid "Launcher"
 msgstr "Llançador "
 
-#: src/e_mod_main.c:587
+#: src/e_mod_main.c:604
 #, fuzzy
 msgid "Launcher Plugin"
 msgstr "Llançador "
 
-#: src/e_mod_main.c:606
+#: src/e_mod_main.c:604
+msgid "Evry Dict"
+msgstr ""
+
+#: src/e_mod_main.c:623
 msgid "Everything Aspell"
 msgstr "Qualsevol Aspell"
 

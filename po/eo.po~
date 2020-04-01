@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker VERSION\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2019-01-27 07:08-0500\n"
+"POT-Creation-Date: 2019-02-01 14:20+0100\n"
 "PO-Revision-Date: 2012-12-07 12:47+0000\n"
 "Last-Translator: Eliovir <Unknown>\n"
 "Language-Team: Esperanto <eo@li.org>\n"
@@ -18,48 +18,56 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-12-08 05:09+0000\n"
 "X-Generator: Launchpad (build 16341)\n"
 
-#: src/e_mod_main.c:391 src/e_mod_main.c:449 src/e_mod_main.c:587
+#: src/e_mod_main.c:408
+msgid "Dictionary"
+msgstr ""
+
+#: src/e_mod_main.c:466
 msgid "Spell Checker"
 msgstr "Literumilo"
 
-#: src/e_mod_main.c:463
+#: src/e_mod_main.c:480
 msgid "General"
 msgstr "Ĝenerala"
 
-#: src/e_mod_main.c:468
+#: src/e_mod_main.c:485
 msgid "Spell checker"
 msgstr "Literumilo"
 
-#: src/e_mod_main.c:471
+#: src/e_mod_main.c:488
 msgid "Aspell"
 msgstr "Aspell"
 
-#: src/e_mod_main.c:474
+#: src/e_mod_main.c:491
 msgid "Hunspell"
 msgstr "Hunspell"
 
-#: src/e_mod_main.c:477
+#: src/e_mod_main.c:494
 msgid "Custom"
 msgstr "Propra"
 
-#: src/e_mod_main.c:481
+#: src/e_mod_main.c:498
 msgid "Custom Command"
 msgstr "Propra komando"
 
-#: src/e_mod_main.c:487
+#: src/e_mod_main.c:504
 msgid "Language"
 msgstr "Lingvo"
 
-#: src/e_mod_main.c:585
+#: src/e_mod_main.c:602
 msgid "Launcher"
 msgstr "Lanĉilo"
 
-#: src/e_mod_main.c:587
+#: src/e_mod_main.c:604
 #, fuzzy
 msgid "Launcher Plugin"
 msgstr "Lanĉilo"
 
-#: src/e_mod_main.c:606
+#: src/e_mod_main.c:604
+msgid "Evry Dict"
+msgstr ""
+
+#: src/e_mod_main.c:623
 msgid "Everything Aspell"
 msgstr "Ĉiuilo por Aspell"
 

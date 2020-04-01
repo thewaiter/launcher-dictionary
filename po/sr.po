@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker VERSION\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2019-02-01 14:20+0100\n"
+"POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2013-04-20 18:08+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: српски <xfce-i18n@xfce.org>\n"
@@ -16,58 +16,75 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-04-21 04:38+0000\n"
 "X-Generator: Launchpad (build 16567)\n"
 
-#: src/e_mod_main.c:408
+#: src/e_mod_main.c:333 src/e_mod_main.c:402
 msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:466
-msgid "Spell Checker"
-msgstr "Правописар"
+#: src/e_mod_main.c:358
+msgid "Select"
+msgstr ""
 
-#: src/e_mod_main.c:480
+#: src/e_mod_main.c:416
 msgid "General"
 msgstr "Опште"
 
-#: src/e_mod_main.c:485
-msgid "Spell checker"
-msgstr "Правописар"
+#: src/e_mod_main.c:421
+msgid "Dictionary engines"
+msgstr ""
 
-#: src/e_mod_main.c:488
-msgid "Aspell"
-msgstr "Аспел"
+#: src/e_mod_main.c:424
+msgid "Stardict (default)"
+msgstr ""
 
-#: src/e_mod_main.c:491
-msgid "Hunspell"
-msgstr "Ханспел"
-
-#: src/e_mod_main.c:494
+#: src/e_mod_main.c:427
 msgid "Custom"
 msgstr "Прилагођено"
 
-#: src/e_mod_main.c:498
-msgid "Custom Command"
-msgstr "Прилагођена наредба"
+#: src/e_mod_main.c:431
+#, fuzzy
+msgid "Custom engine"
+msgstr "Прилагођено"
 
-#: src/e_mod_main.c:504
-msgid "Language"
-msgstr "Језик"
+#: src/e_mod_main.c:437
+msgid "Engine command"
+msgstr ""
 
-#: src/e_mod_main.c:602
+#: src/e_mod_main.c:535
 msgid "Launcher"
 msgstr "Покретач"
 
-#: src/e_mod_main.c:604
+#: src/e_mod_main.c:537
 #, fuzzy
 msgid "Launcher Plugin"
 msgstr "Покретач"
 
-#: src/e_mod_main.c:604
-msgid "Evry Dict"
-msgstr ""
+#: src/e_mod_main.c:537
+#, fuzzy
+msgid "Launcher Dictionary"
+msgstr "Покретач"
 
-#: src/e_mod_main.c:623
-msgid "Everything Aspell"
-msgstr "Правописар свега"
+#: src/e_mod_main.c:556
+#, fuzzy
+msgid "Everything Dictionary"
+msgstr "Прикључак свега"
 
-#~ msgid "Everything Plugin"
-#~ msgstr "Прикључак свега"
+#~ msgid "Spell Checker"
+#~ msgstr "Правописар"
+
+#~ msgid "Spell checker"
+#~ msgstr "Правописар"
+
+#~ msgid "Aspell"
+#~ msgstr "Аспел"
+
+#~ msgid "Hunspell"
+#~ msgstr "Ханспел"
+
+#~ msgid "Custom Command"
+#~ msgstr "Прилагођена наредба"
+
+#~ msgid "Language"
+#~ msgstr "Језик"
+
+#~ msgid "Everything Aspell"
+#~ msgstr "Правописар свега"

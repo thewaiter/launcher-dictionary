@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker VERSION\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2019-02-01 14:20+0100\n"
+"POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2012-11-29 10:16-0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: \n"
@@ -16,58 +16,75 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: src/e_mod_main.c:408
+#: src/e_mod_main.c:333 src/e_mod_main.c:402
 msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:466
-msgid "Spell Checker"
-msgstr "Corretor ortográfico"
+#: src/e_mod_main.c:358
+msgid "Select"
+msgstr ""
 
-#: src/e_mod_main.c:480
+#: src/e_mod_main.c:416
 msgid "General"
 msgstr "Geral"
 
-#: src/e_mod_main.c:485
-msgid "Spell checker"
-msgstr "Corretor ortográfico"
+#: src/e_mod_main.c:421
+msgid "Dictionary engines"
+msgstr ""
 
-#: src/e_mod_main.c:488
-msgid "Aspell"
-msgstr "Aspell"
+#: src/e_mod_main.c:424
+msgid "Stardict (default)"
+msgstr ""
 
-#: src/e_mod_main.c:491
-msgid "Hunspell"
-msgstr "Hunspell"
-
-#: src/e_mod_main.c:494
+#: src/e_mod_main.c:427
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/e_mod_main.c:498
-msgid "Custom Command"
-msgstr "Comando personalizado"
+#: src/e_mod_main.c:431
+#, fuzzy
+msgid "Custom engine"
+msgstr "Personalizado"
 
-#: src/e_mod_main.c:504
-msgid "Language"
-msgstr "Idioma"
+#: src/e_mod_main.c:437
+msgid "Engine command"
+msgstr ""
 
-#: src/e_mod_main.c:602
+#: src/e_mod_main.c:535
 msgid "Launcher"
 msgstr "Lançador"
 
-#: src/e_mod_main.c:604
+#: src/e_mod_main.c:537
 #, fuzzy
 msgid "Launcher Plugin"
 msgstr "Lançador"
 
-#: src/e_mod_main.c:604
-msgid "Evry Dict"
-msgstr ""
+#: src/e_mod_main.c:537
+#, fuzzy
+msgid "Launcher Dictionary"
+msgstr "Lançador"
 
-#: src/e_mod_main.c:623
-msgid "Everything Aspell"
-msgstr "Everything Aspell"
+#: src/e_mod_main.c:556
+#, fuzzy
+msgid "Everything Dictionary"
+msgstr "<i>Plugin</i> Everything"
 
-#~ msgid "Everything Plugin"
-#~ msgstr "<i>Plugin</i> Everything"
+#~ msgid "Spell Checker"
+#~ msgstr "Corretor ortográfico"
+
+#~ msgid "Spell checker"
+#~ msgstr "Corretor ortográfico"
+
+#~ msgid "Aspell"
+#~ msgstr "Aspell"
+
+#~ msgid "Hunspell"
+#~ msgstr "Hunspell"
+
+#~ msgid "Custom Command"
+#~ msgstr "Comando personalizado"
+
+#~ msgid "Language"
+#~ msgstr "Idioma"
+
+#~ msgid "Everything Aspell"
+#~ msgstr "Everything Aspell"

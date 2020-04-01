@@ -1,5 +1,5 @@
-moksha-module-spellchecker (0.0.1-1) bionic; urgency=low
+moksha-module-dictionary (0.0.1-1) bionic; urgency=low
 
   * Initial release
 
- -- Robert Wiley <ylee@bodhilinux.com>  Mon, 28 Jan 2019 04:55:39 -0400
+ -- Stefan Uram <thewaiter@centrum.sk>  Wed, 1 Apr 2020 11:32:39 -0100
