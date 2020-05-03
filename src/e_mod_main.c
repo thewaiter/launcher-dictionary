@@ -93,6 +93,18 @@ _space_skip(const char *line)
    return line;
 }
 
+static char *
+_lower_case(const char *line)
+{ 
+   char *str = strdup(line);
+   char *start;
+   start = str; 
+   for (; *str != '\0'; str++)
+   *str = tolower(*str);
+
+   return start;
+}
+
 
 static Evas_Object *
 _icon_get(Evry_Item *it, Evas *e)
@@ -188,7 +200,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
 
    EVRY_PLUGIN_ITEMS_FREE(p);
 
-   word = p->input;
+   word = p->input; 
    for (l = e->lines; l && l->line; l++)
      {
 	   if (p->is_first)
@@ -265,6 +277,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
      }
 
    input = _space_skip(input);
+   input = _lower_case(input);
    for (s = input; *s != '\0'; s++)
      ;
    for (s--; s > input; s--)
@@ -276,7 +289,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
      return 0;
    
    inp_len = strlen(input)-1;
-   //~ printf("Word is: %s %d\n", input, *(input + inp_len));
+   printf("Word is: %s %d\n", input, *(input + inp_len));
    if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
         input = input + inp_len;        
 	}
