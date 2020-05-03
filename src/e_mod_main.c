@@ -200,7 +200,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
 
    EVRY_PLUGIN_ITEMS_FREE(p);
 
-   word = p->input; 
+   word = p->input;
    for (l = e->lines; l && l->line; l++)
      {
 	   if (p->is_first)
@@ -289,7 +289,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
      return 0;
    
    inp_len = strlen(input)-1;
-   printf("Word is: %s %d\n", input, *(input + inp_len));
+   //~ printf("Word is: %s %d\n", input, *(input + inp_len));
    if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
         input = input + inp_len;        
 	}
