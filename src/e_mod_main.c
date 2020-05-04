@@ -93,18 +93,13 @@ _space_skip(const char *line)
    return line;
 }
 
-static char *
-_lower_case(const char *line)
+static char *_lower_case(const char *line) 
 { 
-   char *str = strdup(line);
-   char *start;
-   start = str; 
-   for (; *str != '\0'; str++)
-   *str = tolower(*str);
-
-   return start;
+    char *s, *str = strdup(line); 
+    if (!str) return NULL; 
+    for (s = str; *s; s++) *s = tolower(*s); 
+    return str; 
 }
-
 
 static Evas_Object *
 _icon_get(Evry_Item *it, Evas *e)
@@ -258,6 +253,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
 {
    GET_PLUGIN(p, plugin);
    const char *s;
+   char *input2;
    unsigned int len;
    unsigned int inp_len;
 
@@ -276,8 +272,9 @@ _fetch(Evry_Plugin *plugin, const char *input)
      return 0;
      }
 
-   input = _space_skip(input);
-   input = _lower_case(input);
+   input2 = _lower_case(input);
+   input  = _space_skip(input2);
+   
    for (s = input; *s != '\0'; s++)
      ;
    for (s--; s > input; s--)
@@ -292,7 +289,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
    //~ printf("Word is: %s %d\n", input, *(input + inp_len));
    if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
         input = input + inp_len;        
-	}
+    }
   
    input = eina_stringshare_add_length(input, len);
    IF_RELEASE(p->input);
@@ -304,7 +301,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
    
    ecore_exe_send(p->exe, (char *)p->input, len);
    ecore_exe_send(p->exe, "\n", 1); //this means the enter key press send to the prog.
-
+   free(input2);
    return EVRY_PLUGIN_HAS_ITEMS(p);
 }
 
@@ -533,7 +530,7 @@ _conf_free(void)
    if (_conf)
      {
    if (_conf->custom) eina_stringshare_del(_conf->custom);
-   if (_conf->command)   eina_stringshare_del(_conf->command);
+   if (_conf->command) eina_stringshare_del(_conf->command);
 
    E_FREE(_conf);
      }
