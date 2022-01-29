@@ -15,9 +15,11 @@ EDJE_FLAGS = -v \
 	     -id $(top_srcdir)/images
 
 filesdir = $(datadir)
-files_DATA = module.desktop
+files_DATA = module.desktop e-module.edj
 
-EXTRA_DIST = module.desktop.in 
+EXTRA_DIST = module.desktop.in \
+             e-module.edc \
+	     images/module_icon.png
 
 %.edj:  %.edc
 	$(EDJE_CC) $(EDJE_FLAGS) $< $@
