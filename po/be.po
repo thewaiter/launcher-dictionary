@@ -1,0 +1,64 @@
+# Belarusian translation for launcher-dictionary module.
+# This file is put in the public domain.
+# R0bur <robursw@gmail.com>, 2023
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: launcher-dictionary\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2023-07-02 21:00+0300\n"
+"PO-Revision-Date: 2023-07-02 21:00+0300\n"
+"Last-Translator: R0bur <robursw@gmail.com>\n"
+"Language-Team: Belarusian\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/e_mod_main.c:333 src/e_mod_main.c:402
+msgid "Dictionary"
+msgstr "Слоўнік"
+
+#: src/e_mod_main.c:358
+msgid "Select"
+msgstr "Вылучыць"
+
+#: src/e_mod_main.c:416
+msgid "General"
+msgstr "Асноўныя"
+
+#: src/e_mod_main.c:421
+msgid "Dictionary engines"
+msgstr "Праграмы слоўнікаў"
+
+#: src/e_mod_main.c:424
+msgid "Stardict (default)"
+msgstr "Stardict (перадвызначаная)"
+
+#: src/e_mod_main.c:427
+msgid "Custom"
+msgstr "Карыстальніцкія"
+
+#: src/e_mod_main.c:431
+msgid "Custom engine"
+msgstr "Карыстальніцкая праграма"
+
+#: src/e_mod_main.c:437
+msgid "Engine command"
+msgstr "Каманда праграмы"
+
+#: src/e_mod_main.c:535
+msgid "Launcher"
+msgstr "Хуткі запуск"
+
+#: src/e_mod_main.c:537
+msgid "Launcher Plugin"
+msgstr "Плагін Хуткага запуску"
+
+#: src/e_mod_main.c:537
+msgid "Launcher Dictionary"
+msgstr "Слоўнік Хуткага запуску"
+
+#: src/e_mod_main.c:556
+msgid "Everything Dictionary"
+msgstr "Усё: Слоўнік"
