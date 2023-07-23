@@ -1,28 +1,30 @@
 # Portuguese translation for spell-checker.
 # This file is put in the public domain.
-# Sérgio Marques smarquespt@gmail.com>, 2012.
+# Sérgio Marques <smarquespt@gmail.com>, 2012.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: spell-checker VERSION\n"
+"Project-Id-Version: spell-checker\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
-"PO-Revision-Date: 2012-11-29 10:16-0000\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
-"Language-Team: \n"
-"Language: Portuguese\n"
+"PO-Revision-Date: 2023-07-23 15:53+0100\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: src/e_mod_main.c:333 src/e_mod_main.c:402
 msgid "Dictionary"
-msgstr ""
+msgstr "Dicionário"
 
 #: src/e_mod_main.c:358
 msgid "Select"
-msgstr ""
+msgstr "Selecionar"
 
 #: src/e_mod_main.c:416
 msgid "General"
@@ -30,43 +32,39 @@ msgstr "Geral"
 
 #: src/e_mod_main.c:421
 msgid "Dictionary engines"
-msgstr ""
+msgstr "Mecanismos de dicionário"
 
 #: src/e_mod_main.c:424
 msgid "Stardict (default)"
-msgstr ""
+msgstr "Stardict (padrão)"
 
 #: src/e_mod_main.c:427
 msgid "Custom"
 msgstr "Personalizado"
 
 #: src/e_mod_main.c:431
-#, fuzzy
 msgid "Custom engine"
-msgstr "Personalizado"
+msgstr "Mecanismo personalizado"
 
 #: src/e_mod_main.c:437
 msgid "Engine command"
-msgstr ""
+msgstr "Comando do mecanismo"
 
 #: src/e_mod_main.c:535
 msgid "Launcher"
 msgstr "Lançador"
 
 #: src/e_mod_main.c:537
-#, fuzzy
 msgid "Launcher Plugin"
-msgstr "Lançador"
+msgstr "Plugin do lançador"
 
 #: src/e_mod_main.c:537
-#, fuzzy
 msgid "Launcher Dictionary"
-msgstr "Lançador"
+msgstr "Dicionário do lançador"
 
 #: src/e_mod_main.c:556
-#, fuzzy
 msgid "Everything Dictionary"
-msgstr "<i>Plugin</i> Everything"
+msgstr "Dicionário omni"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Corretor ortográfico"
