@@ -31,7 +31,7 @@ Press "CTRL + u" key combination for the new word searching.
 
 # Module authors:
 
-Full credit for the original code of this module go the enlightenment developers:
+Full credit for the original code of this module goes the enlightenment developers:
 * Gustavo Barbieri
 * Hannes Janetzek
 
