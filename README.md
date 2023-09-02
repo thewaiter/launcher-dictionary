@@ -15,7 +15,7 @@ Spellcheck module inspired me to create this module. The main goal is to have a 
 * [EFL](https://www.enlightenment.org/download)
 * [Moksha](https://github.com/JeffHoogland/moksha)
 * [sdcv](https://wiki.archlinux.org/index.php/Sdcv)
-* [stardict dictionaries](https://sites.google.com/site/gtonguedict/home/stardict-dictionaries)
+* [stardict dictionaries](https://tuxor1337.frama.io/firedict/dictionaries.html)
 
 This module depends on sdcv utility. It is a console Stardict application.
 
