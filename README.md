@@ -6,7 +6,7 @@ Spellcheck module inspired me to create this module. The main goal is to have a 
 
 
 <p align="center">
-  <img src="http://www.enlightenment.org/ss/e-5c546dd0973cc5.02130478.png" alt="Screen Shot">
+  <img src="https://i.imgur.com/38gj3sj.png" alt="Screen Shot">
 </p>
 
 
