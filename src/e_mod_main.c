@@ -102,7 +102,7 @@ static char *_lower_case(const char *line)
 }
 
 static Evas_Object *
-_icon_get(Evry_Item *it, Evas *e)
+_icon_get(Evry_Item *it __UNUSED__, Evas *e)
 {
    Evas_Object *o = NULL;
              o = e_icon_add(e);
@@ -111,7 +111,7 @@ _icon_get(Evry_Item *it, Evas *e)
 }
 
 static Evas_Object *
-_no_icon_get(Evry_Item *it, Evas *e)
+_no_icon_get(Evry_Item *it __UNUSED__, Evas *e)
 {
    Evas_Object *o = NULL;
              o = e_icon_add(e);
@@ -145,17 +145,16 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
 static void
 _suggestions_add(Plugin *p, const char *line)
 {
-	const char *s, *right_margin;
-	int length;
-	
-	length = strlen(line);
-	s = line;
-	
-	
-	//word wrap adapted from	https://c-for-dummies.com/blog/?p=682
-	
-	 while(*s) 
-    {
+    const char *s, *right_margin;
+    int length;
+
+    length = strlen(line);
+    s = line;
+
+    //word wrap adapted from	https://c-for-dummies.com/blog/?p=682
+
+    while(*s) 
+      {
         if(length <= WRAP)
         {
            _item_add(p, s, WRAP, 1);     /* display string */
@@ -179,7 +178,7 @@ _suggestions_add(Plugin *p, const char *line)
         _item_add(p, s, right_margin - s, 1); ;
         length -= right_margin-s+1;      /* +1 for the space */
         s = right_margin + 1;
-    }    
+      }
 }
 
 static Eina_Bool
@@ -188,25 +187,25 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    GET_PLUGIN(p, data);
    Ecore_Exe_Event_Data *e = event;
    Ecore_Exe_Event_Data_Line *l;
-   const char *word;
+   //~ const char *word;
  
    if (e->exe != p->exe)
      return ECORE_CALLBACK_PASS_ON;
 
    EVRY_PLUGIN_ITEMS_FREE(p);
 
-   word = p->input;
+   //~ word = p->input;
    for (l = e->lines; l && l->line; l++)
      {
-	   if (p->is_first)
-		 {
-			ERR("DICT: %s", l->line);
-			p->is_first = 0;
-			continue;
-		 }
+       if (p->is_first)
+         {
+            ERR("DICT: %s", l->line);
+            p->is_first = 0;
+            continue;
+         }
      _suggestions_add(p, l->line);
      }
-     
+
    if (p->base.items)
     EVRY_PLUGIN_UPDATE(p, EVRY_UPDATE_ADD);
 
@@ -246,7 +245,8 @@ _action(Evry_Action *act)
 {
    char *tmp = evry->util_url_unescape(act->it1.item->label, 0);
    printf("This is an action %s\n", tmp);
- }    
+   return 0;
+ }
 
 static int
 _fetch(Evry_Plugin *plugin, const char *input)
@@ -363,10 +363,9 @@ _plugins_init(const Evry_API *_api)
    EVRY_ITEM_DATA_INT_SET(act, _method);				\
    EVRY_ITEM(act)->icon_get = &_icon_get;				\
    evry->action_register(act, 0);				       	\
-   //~ actions = eina_list_append(actions, act);				\
+   //~ actions = eina_list_append(actions, act);
    
-    ACTION_NEW(N_("Select"), EVRY_TYPE_TEXT, "edit-find",
-	      _action, NULL, NULL);
+   ACTION_NEW(N_("Select"), EVRY_TYPE_TEXT, "edit-find", _action, NULL, NULL);
 
    return EINA_TRUE;
 }
