@@ -65,7 +65,7 @@ _exe_restart(Plugin *p)
    else
        command_val = "";
 
-  
+
    len = snprintf(cmd, sizeof(cmd),
         engines[_conf->engine - 1], command_val);
    
@@ -95,28 +95,28 @@ _space_skip(const char *line)
 
 static char *_lower_case(const char *line) 
 { 
-    char *s, *str = strdup(line); 
-    if (!str) return NULL; 
-    for (s = str; *s; s++) *s = tolower(*s); 
-    return str; 
+   char *s, *str = strdup(line);
+   if (!str) return NULL;
+   for (s = str; *s; s++) *s = tolower(*s);
+   return str;
 }
 
 static Evas_Object *
 _icon_get(Evry_Item *it __UNUSED__, Evas *e)
 {
    Evas_Object *o = NULL;
-             o = e_icon_add(e);
-             e_util_icon_theme_set(o, "accessories-dictionary");
-        return o;
+   o = e_icon_add(e);
+   e_util_icon_theme_set(o, "accessories-dictionary");
+   return o;
 }
 
 static Evas_Object *
 _no_icon_get(Evry_Item *it __UNUSED__, Evas *e)
 {
    Evas_Object *o = NULL;
-             o = e_icon_add(e);
-             e_util_icon_theme_set(o, "");
-        return o;
+   o = e_icon_add(e);
+   e_util_icon_theme_set(o, "");
+   return o;
 }
 
 static void
@@ -124,12 +124,12 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
 {
    Evry_Item *it;
    char cmd[30];
-   
+
    if(strstr(word, "Found") != NULL) return;
-   
+
    snprintf(cmd, sizeof(cmd), "-->%s", p->input);
    if (strstr(word, cmd) != NULL)  return;
-      
+
    if (strstr(word, "-->") != NULL) 
       it = EVRY_ITEM_NEW(Evry_Item, p, NULL, _icon_get, NULL);
    else 
@@ -145,40 +145,40 @@ _item_add(Plugin *p, const char *word, int word_size, int prio)
 static void
 _suggestions_add(Plugin *p, const char *line)
 {
-    const char *s, *right_margin;
-    int length;
+   const char *s, *right_margin;
+   int length;
 
-    length = strlen(line);
-    s = line;
+   length = strlen(line);
+   s = line;
 
-    //word wrap adapted from	https://c-for-dummies.com/blog/?p=682
+   //word wrap adapted from	https://c-for-dummies.com/blog/?p=682
 
-    while(*s) 
-      {
-        if(length <= WRAP)
-        {
+   while (*s)
+     {
+       if (length <= WRAP)
+         {
            _item_add(p, s, WRAP, 1);     /* display string */
             return;      /* and leave */
-        }
-        right_margin = s + WRAP;
-        while(!isspace(*right_margin))
-        {
-            right_margin--;
-            if( right_margin == s)
-            {
-                right_margin += WRAP;
-                while(!isspace(*right_margin))
-                {
-                    if( *right_margin == '\0')
-                        break;
-                    right_margin++;
-                }
-            }
-        }
-        _item_add(p, s, right_margin - s, 1); ;
-        length -= right_margin-s+1;      /* +1 for the space */
-        s = right_margin + 1;
-      }
+         }
+       right_margin = s + WRAP;
+       while (!isspace(*right_margin))
+         {
+           right_margin--;
+           if (right_margin == s)
+             {
+               right_margin += WRAP;
+               while (!isspace(*right_margin))
+                 {
+                   if (*right_margin == '\0')
+                      break;
+                   right_margin++;
+                 }
+             }
+          }
+       _item_add(p, s, right_margin - s, 1); ;
+       length -= right_margin-s+1;      /* +1 for the space */
+       s = right_margin + 1;
+     }
 }
 
 static Eina_Bool
@@ -188,7 +188,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
    Ecore_Exe_Event_Data *e = event;
    Ecore_Exe_Event_Data_Line *l;
    //~ const char *word;
- 
+
    if (e->exe != p->exe)
      return ECORE_CALLBACK_PASS_ON;
 
@@ -207,7 +207,7 @@ _cb_data(void *data, int type __UNUSED__, void *event)
      }
 
    if (p->base.items)
-    EVRY_PLUGIN_UPDATE(p, EVRY_UPDATE_ADD);
+     EVRY_PLUGIN_UPDATE(p, EVRY_UPDATE_ADD);
 
    return ECORE_CALLBACK_PASS_ON;
 }
@@ -261,20 +261,20 @@ _fetch(Evry_Plugin *plugin, const char *input)
 
    if (!p->handler.data)
      {
-   if (!p->handler.data)
-     p->handler.data = ecore_event_handler_add
-       (ECORE_EXE_EVENT_DATA, _cb_data, p);
-   if (!p->handler.del)
-     p->handler.del = ecore_event_handler_add
-       (ECORE_EXE_EVENT_DEL, _cb_del, p);
+       if (!p->handler.data)
+         p->handler.data = ecore_event_handler_add
+           (ECORE_EXE_EVENT_DATA, _cb_data, p);
+       if (!p->handler.del)
+         p->handler.del = ecore_event_handler_add
+           (ECORE_EXE_EVENT_DEL, _cb_del, p);
 
-   if (!_exe_restart(p))
-     return 0;
+       if (!_exe_restart(p))
+         return 0;
      }
 
    input2 = _lower_case(input);
    input  = _space_skip(input2);
-   
+
    for (s = input; *s != '\0'; s++)
      ;
    for (s--; s > input; s--)
@@ -284,13 +284,12 @@ _fetch(Evry_Plugin *plugin, const char *input)
    len = s - input + 1;
    if (len < 1)
      return 0;
-   
+
    inp_len = strlen(input)-1;
    //~ printf("Word is: %s %d\n", input, *(input + inp_len));
-   if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57)) {
-        input = input + inp_len;        
-    }
-  
+   if ((*(input + inp_len) >= 48) && (*(input + inp_len) <= 57))
+     input = input + inp_len;
+
    input = eina_stringshare_add_length(input, len);
    IF_RELEASE(p->input);
    if (p->input == input)
@@ -298,7 +297,7 @@ _fetch(Evry_Plugin *plugin, const char *input)
 
    p->input = input;
    if (!p->exe) return 0;
-   
+
    ecore_exe_send(p->exe, (char *)p->input, len);
    ecore_exe_send(p->exe, "\n", 1); //this means the enter key press send to the prog.
    free(input2);
@@ -322,8 +321,8 @@ _finish(Evry_Plugin *plugin)
 
    if (p->exe)
      {
-   ecore_exe_quit(p->exe);
-   ecore_exe_free(p->exe);
+       ecore_exe_quit(p->exe);
+       ecore_exe_free(p->exe);
      }
    IF_RELEASE(p->command);
    IF_RELEASE(p->input);
@@ -348,15 +347,15 @@ _plugins_init(const Evry_API *_api)
 
    if (evry->plugin_register(_plug, EVRY_PLUGIN_SUBJECT, 100))
      {
-   Plugin_Config *pc = _plug->config;
-   pc->view_mode = VIEW_MODE_LIST;
-   pc->aggregate = EINA_FALSE;
-   /* pc->top_level = EINA_FALSE; */
-   pc->trigger = eina_stringshare_add(TRIGGER);
-   pc->trigger_only = EINA_TRUE;
-   pc->min_query = 1;
+       Plugin_Config *pc = _plug->config;
+       pc->view_mode = VIEW_MODE_LIST;
+       pc->aggregate = EINA_FALSE;
+       /* pc->top_level = EINA_FALSE; */
+       pc->trigger = eina_stringshare_add(TRIGGER);
+       pc->trigger_only = EINA_TRUE;
+       pc->min_query = 1;
      }
-   
+
    #define ACTION_NEW(_name, _type, _icon, _action, _check, _method)	\
    act = EVRY_ACTION_NEW(_name, _type, 0, _icon, _action, _check);	\
    act->remember_context = EINA_TRUE;					\
@@ -364,7 +363,7 @@ _plugins_init(const Evry_API *_api)
    EVRY_ITEM(act)->icon_get = &_icon_get;				\
    evry->action_register(act, 0);				       	\
    //~ actions = eina_list_append(actions, act);
-   
+
    ACTION_NEW(N_("Select"), EVRY_TYPE_TEXT, "edit-find", _action, NULL, NULL);
 
    return EINA_TRUE;
@@ -528,10 +527,9 @@ _conf_free(void)
 {
    if (_conf)
      {
-   if (_conf->custom) eina_stringshare_del(_conf->custom);
-   if (_conf->command) eina_stringshare_del(_conf->command);
-
-   E_FREE(_conf);
+       if (_conf->custom) eina_stringshare_del(_conf->custom);
+       if (_conf->command) eina_stringshare_del(_conf->command);
+       E_FREE(_conf);
      }
 }
 
@@ -565,10 +563,9 @@ _conf_init(E_Module *m)
    if (_conf && !e_util_module_config_check(_("Everything Dictionary"),
                    _conf->version,
                    MOD_CONFIG_FILE_VERSION))
-     _conf_free();
+   _conf_free();
 
    if (!_conf) _conf_new();
-
    _conf->module = m;
 }
 
@@ -609,7 +606,6 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    EVRY_MODULE_FREE(evry_module);
 
    _conf_shutdown();
-
    return 1;
 }
 
