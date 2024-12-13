@@ -14,50 +14,50 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr "Slovník"
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr "Vyber"
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Všeobecné"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr "Typ prekladača"
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr "Stardict (predvolené)"
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Voliteľné"
 
-#: src/e_mod_main.c:431
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Voliteľné"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr "Príkaz prekladača"
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Spúšťač"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Zásuvný Modul"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Slovník"
 
-#: src/e_mod_main.c:556
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Slovník pre Spúšťač"

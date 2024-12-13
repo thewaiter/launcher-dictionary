@@ -18,71 +18,50 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr "Dicionário"
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr "Selecionar"
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Geral"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr "Mecanismos de dicionário"
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr "Stardict (padrão)"
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/e_mod_main.c:431
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Mecanismo personalizado"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr "Comando do mecanismo"
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Lançador"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Plugin do lançador"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Dicionário do lançador"
 
-#: src/e_mod_main.c:556
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Dicionário omni"
-
-#~ msgid "Spell Checker"
-#~ msgstr "Corretor ortográfico"
-
-#~ msgid "Spell checker"
-#~ msgstr "Corretor ortográfico"
-
-#~ msgid "Aspell"
-#~ msgstr "Aspell"
-
-#~ msgid "Hunspell"
-#~ msgstr "Hunspell"
-
-#~ msgid "Custom Command"
-#~ msgstr "Comando personalizado"
-
-#~ msgid "Language"
-#~ msgstr "Idioma"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Everything Aspell"

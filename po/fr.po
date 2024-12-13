@@ -16,71 +16,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.3\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr "Dictionnaire"
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr "Choisir"
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Paramètres"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr "Moteurs"
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr "Stardict (par défaut)"
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Personnalisé"
 
-#: src/e_mod_main.c:431
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Moteur préféré"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr "Commande du moteur"
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Lanceur"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Greffon Omni"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Dictionnaire"
 
-#: src/e_mod_main.c:556
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Dictionnaire Omni"
-
-#~ msgid "Spell Checker"
-#~ msgstr "Correcteur orthographique"
-
-#~ msgid "Spell checker"
-#~ msgstr "Correcteur orthographique"
-
-#~ msgid "Aspell"
-#~ msgstr "Aspell"
-
-#~ msgid "Hunspell"
-#~ msgstr "Hunspell"
-
-#~ msgid "Custom Command"
-#~ msgstr "Commande personnalisée"
-
-#~ msgid "Language"
-#~ msgstr "Langue"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Aspell pour Omni"

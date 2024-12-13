@@ -14,75 +14,50 @@ msgstr ""
 "X-Poedit-Bookmarks: -1,-1,1139,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr ""
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "General"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr ""
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr ""
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Personalitzar "
 
-#: src/e_mod_main.c:431
-#, fuzzy
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Personalitzar "
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr ""
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Llançador "
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Llançador "
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Llançador "
 
-#: src/e_mod_main.c:556
-#, fuzzy
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Plugin Qualsevol"
-
-#~ msgid "Spell Checker"
-#~ msgstr "Corrector ortogràfic"
-
-#~ msgid "Spell checker"
-#~ msgstr "Corrector ortogràfic"
-
-#~ msgid "Aspell"
-#~ msgstr "Aspell"
-
-#~ msgid "Hunspell"
-#~ msgstr "Hunspell"
-
-#~ msgid "Custom Command"
-#~ msgstr "Comanda personalitzada "
-
-#~ msgid "Language"
-#~ msgstr "Llengua"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Qualsevol Aspell"

@@ -16,75 +16,50 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-04-21 04:38+0000\n"
 "X-Generator: Launchpad (build 16567)\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr ""
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Опште"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr ""
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr ""
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Прилагођено"
 
-#: src/e_mod_main.c:431
-#, fuzzy
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Прилагођено"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr ""
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Покретач"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Покретач"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Покретач"
 
-#: src/e_mod_main.c:556
-#, fuzzy
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Прикључак свега"
-
-#~ msgid "Spell Checker"
-#~ msgstr "Правописар"
-
-#~ msgid "Spell checker"
-#~ msgstr "Правописар"
-
-#~ msgid "Aspell"
-#~ msgstr "Аспел"
-
-#~ msgid "Hunspell"
-#~ msgstr "Ханспел"
-
-#~ msgid "Custom Command"
-#~ msgstr "Прилагођена наредба"
-
-#~ msgid "Language"
-#~ msgstr "Језик"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Правописар свега"

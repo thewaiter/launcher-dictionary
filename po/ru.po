@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
-"POT-Creation-Date: 2023-07-02 21:00+0300\n"
+"POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2023-07-02 21:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian\n"
@@ -15,50 +15,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr "Словарь"
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr "Выделить"
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Основные"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr "Программы словарей"
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr "Stardict (по умолчанию)"
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Пользовательские"
 
-#: src/e_mod_main.c:431
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Пользовательская программа"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr "Команда программы"
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Быстрый запуск"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Плагин Быстрого запуска"
 
-#: src/e_mod_main.c:537
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Словарь Быстрого запуска"
 
-#: src/e_mod_main.c:556
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Всё: Словарь"

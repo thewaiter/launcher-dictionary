@@ -18,75 +18,50 @@ msgstr ""
 "X-Launchpad-Export-Date: 2012-12-08 05:09+0000\n"
 "X-Generator: Launchpad (build 16341)\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr ""
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Ĝenerala"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr ""
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr ""
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Propra"
 
-#: src/e_mod_main.c:431
-#, fuzzy
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Propra"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr ""
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Lanĉilo"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Lanĉilo"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Lanĉilo"
 
-#: src/e_mod_main.c:556
-#, fuzzy
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Kromprogramo de ĉiuilo"
-
-#~ msgid "Spell Checker"
-#~ msgstr "Literumilo"
-
-#~ msgid "Spell checker"
-#~ msgstr "Literumilo"
-
-#~ msgid "Aspell"
-#~ msgstr "Aspell"
-
-#~ msgid "Hunspell"
-#~ msgstr "Hunspell"
-
-#~ msgid "Custom Command"
-#~ msgstr "Propra komando"
-
-#~ msgid "Language"
-#~ msgstr "Lingvo"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Ĉiuilo por Aspell"

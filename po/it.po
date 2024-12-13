@@ -15,75 +15,50 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr ""
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr ""
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "Generale"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr ""
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr ""
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: src/e_mod_main.c:431
-#, fuzzy
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Personalizzato"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr ""
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Lanciatore"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Lanciatore"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Lanciatore"
 
-#: src/e_mod_main.c:556
-#, fuzzy
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Plugin di Everything"
-
-#~ msgid "Spell Checker"
-#~ msgstr "Controllo ortografico"
-
-#~ msgid "Spell checker"
-#~ msgstr "Controllo ortografico"
-
-#~ msgid "Aspell"
-#~ msgstr "Aspell"
-
-#~ msgid "Hunspell"
-#~ msgstr "Hunspell"
-
-#~ msgid "Custom Command"
-#~ msgstr "Comando personalizzato"
-
-#~ msgid "Language"
-#~ msgstr "Lingua"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Everything Aspell"

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sticky_notes\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2024-05-27 21:26+0200\n"
+"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2023-12-09 09:47-0500\n"
 "Last-Translator: Alejandro Díaz <escuelaslinux@gmail.com>\n"
 "Language-Team: Spanish <>\n"
@@ -16,76 +16,50 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: src/e_mod_main.c:333 src/e_mod_main.c:402
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
 msgstr "Diccionario"
 
-#: src/e_mod_main.c:358
+#: src/e_mod_main.c:368
 msgid "Select"
 msgstr "Seleccionar"
 
-#: src/e_mod_main.c:416
+#: src/e_mod_main.c:425
 msgid "General"
 msgstr "General"
 
-#: src/e_mod_main.c:421
+#: src/e_mod_main.c:430
 msgid "Dictionary engines"
 msgstr "Motores de diccionario"
 
-#: src/e_mod_main.c:424
+#: src/e_mod_main.c:433
 msgid "Stardict (default)"
 msgstr "Stardict (por omisión)"
 
-#: src/e_mod_main.c:427
+#: src/e_mod_main.c:436
 msgid "Custom"
 msgstr "Personalizar"
 
-#: src/e_mod_main.c:431
-#, fuzzy
+#: src/e_mod_main.c:440
 msgid "Custom engine"
 msgstr "Motor personalizado"
 
-#: src/e_mod_main.c:437
+#: src/e_mod_main.c:446
 msgid "Engine command"
 msgstr "Comando del motor"
 
-#: src/e_mod_main.c:535
+#: src/e_mod_main.c:543
 msgid "Launcher"
 msgstr "Lanzador"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Plugin"
 msgstr "Plugin del Lanzador"
 
-#: src/e_mod_main.c:537
-#, fuzzy
+#: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
 msgstr "Diccionario del Lanzador"
 
-#: src/e_mod_main.c:556
-#, fuzzy
+#: src/e_mod_main.c:564
 msgid "Everything Dictionary"
 msgstr "Diccionario Everything"
-
-#, fuzzy
-#~ msgid "Spell Checker"
-#~ msgstr "Corrector ortográfico"
-
-#~ msgid "Spell checker"
-#~ msgstr "Corrector ortográfico"
-
-#~ msgid "Aspell"
-#~ msgstr "Aspell"
-
-#~ msgid "Hunspell"
-#~ msgstr "Hunspell"
-
-#~ msgid "Custom Command"
-#~ msgstr "Comando personalizado"
-
-#~ msgid "Language"
-#~ msgstr "Idioma"
-
-#~ msgid "Everything Aspell"
-#~ msgstr "Everything Aspell"
