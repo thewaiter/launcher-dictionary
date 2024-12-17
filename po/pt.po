@@ -1,14 +1,14 @@
 # Portuguese translation for spell-checker.
 # This file is put in the public domain.
 # Sérgio Marques <smarquespt@gmail.com>, 2012.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2023.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker\n"
 "Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
-"PO-Revision-Date: 2023-07-23 15:53+0100\n"
+"PO-Revision-Date: 2024-12-17 00:17+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese\n"
 "Language: pt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
@@ -32,7 +32,7 @@ msgstr "Geral"
 
 #: src/e_mod_main.c:430
 msgid "Dictionary engines"
-msgstr "Mecanismos de dicionário"
+msgstr "Tipo de tradutor"
 
 #: src/e_mod_main.c:433
 msgid "Stardict (default)"
@@ -48,7 +48,7 @@ msgstr "Mecanismo personalizado"
 
 #: src/e_mod_main.c:446
 msgid "Engine command"
-msgstr "Comando do mecanismo"
+msgstr "Comando do tradutor"
 
 #: src/e_mod_main.c:543
 msgid "Launcher"
@@ -60,7 +60,7 @@ msgstr "Plugin do lançador"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
-msgstr "Dicionário do lançador"
+msgstr "Dicionário"
 
 #: src/e_mod_main.c:564
 msgid "Everything Dictionary"
