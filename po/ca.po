@@ -1,3 +1,6 @@
+# Catalan translation for launcher-places.
+# This file is put in the public domain.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker VERSION\n"
