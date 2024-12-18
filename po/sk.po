@@ -1,18 +1,21 @@
 # Spanish translation for spell-checker.
 # This file is put in the public domain.
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
+
 msgid ""
 msgstr ""
-"Project-Id-Version: spell-checker VERSION\n"
+"Project-Id-Version: dictionary 0.0.1\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2012-11-08 02:06+0100\n"
-"Last-Translator: Aníbal Garrido <khany@member.trisquel.info>\n"
+"Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
 "Language-Team: Enlightenment Team\n"
-"Language: es\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
