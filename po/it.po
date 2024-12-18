@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: spell-checker VERSION\n"
-"Report-Msgid-Bugs-To: ylee@bodhilinux.com\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2012-11-28 18:41+0100\n"
 "Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
