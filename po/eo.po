@@ -1,6 +1,7 @@
 # Esperanto translation for launcher-dictionary module.
 # This file is put in the public domain.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+# Eliovir
 #
 msgid ""
 msgstr ""

@@ -1,5 +1,6 @@
 # Russian translation for launcher-dictionary module.
 # This file is put in the public domain.
+#
 # R0bur <robursw@gmail.com>, 2023
 #
 msgid ""

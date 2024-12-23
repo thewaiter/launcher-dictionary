@@ -1,5 +1,6 @@
 # French translation for launcher-dictionary.
 # This file is put in the public domain.
+#
 # similar <similar@orange.fr>, 2021.
 #
 msgid ""

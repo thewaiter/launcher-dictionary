@@ -1,5 +1,7 @@
-# Catalan translationfor launcher-dictionary module.
+# Catalan translation for launcher-dictionary module.
 # This file is put in the public domain.
+#
+# Marc Furtià i Puig <marc.furtia@gmail.com>
 #
 msgid ""
 msgstr ""

@@ -1,8 +1,8 @@
 # Spanish translation for launcher-dictionary module.
 # This file is put in the public domain.
+#
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
-# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
-
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: dictionary 0.0.1\n"

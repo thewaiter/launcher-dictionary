@@ -1,7 +1,7 @@
 # Portuguese translationfor launcher-dictionary module.
 # This file is put in the public domain.
+#
 # Sérgio Marques <smarquespt@gmail.com>, 2012.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2023, 2024.
 #
 msgid ""
 msgstr ""

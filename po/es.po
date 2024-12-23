@@ -1,6 +1,8 @@
 # Spanish translation for launcher-dictionary module.
 # This file is put in the public domain.
+#
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: sticky_notes\n"

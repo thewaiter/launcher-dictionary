@@ -1,5 +1,6 @@
 # Serbian translation for launcher-dictionary module.
 # This file is put in the public domain.
+#
 # Саша Петровић <salepetronije@gmail.com>, 2012.
 #
 msgid ""
