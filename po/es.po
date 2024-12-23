@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sticky_notes\n"
+"Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2023-12-09 09:47-0500\n"

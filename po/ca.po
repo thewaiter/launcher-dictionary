@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: spell-checker VERSION\n"
+"Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2013-02-01 09:52+0100\n"
