@@ -1,5 +1,4 @@
-# Chinese translations for spell-checker.
-# spell-checker 软件包的简体中文翻译.
+# Chinese translations for launcher-dictionary module.
 # This file is put in the public domain.
 # Aron Xu <happyaron.xu@gmail.com>, 2012.
 #

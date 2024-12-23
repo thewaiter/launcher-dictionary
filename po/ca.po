@@ -1,4 +1,4 @@
-# Catalan translation for launcher-places.
+# Catalan translationfor launcher-dictionary module.
 # This file is put in the public domain.
 #
 msgid ""

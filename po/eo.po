@@ -1,6 +1,5 @@
-# Esperanto translation for spell-checker.
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the enlightenment package.
+# Esperanto translation for launcher-dictionary module.
+# This file is put in the public domain.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""

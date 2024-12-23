@@ -1,4 +1,4 @@
-# Galician translation of spell-checker.
+# Galician translationfor launcher-dictionary module.
 # This file is put in the public domain.
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
 #
