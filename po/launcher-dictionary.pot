@@ -1,5 +1,4 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024 Bodhi Linux
 # This file is put in the public domain.
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
