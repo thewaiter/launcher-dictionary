@@ -1,4 +1,4 @@
-# Belarusian translation for launcher-dictionary module.
+# Belarusian translation for Launcher-Dictionary module.
 # This file is put in the public domain.
 #
 # R0bur <robursw@gmail.com>, 2023

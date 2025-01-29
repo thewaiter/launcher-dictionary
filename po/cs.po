@@ -1,4 +1,4 @@
-# Czech translation for launcher-dictionary module.
+# Czech translation for Launcher-Dictionary module.
 # This file is put in the public domain.
 #
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.

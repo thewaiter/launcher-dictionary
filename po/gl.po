@@ -1,4 +1,4 @@
-# Galician translation for launcher-dictionary module.
+# Galician translation for Launcher-Dictionary module.
 # This file is put in the public domain.
 #
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.

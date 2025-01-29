@@ -1,4 +1,4 @@
-# German translation for launcher-dictionary module.
+# German translation for Launcher-Dictionary module.
 # This file is put in the public domain.
 #
 # Christian Becker <xpistianbecker@gmail.com>, 2024.
