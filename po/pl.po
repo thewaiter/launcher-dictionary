@@ -1,65 +1,65 @@
-# Italian translation for Launcher-Dictionary module.
+# Polish translation for Launcher-Dictionary module.
 # This file is put in the public domain.
 #
-# Massimo Maiurana <maiurana@gmail.com>, 2012.
+# diekrz2, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
-"PO-Revision-Date: 2025-02-01 12:05+0100\n"
+"PO-Revision-Date: 2025-02-01 12:38+0100\n"
 "Last-Translator: diekrz2\n"
 "Language-Team: none\n"
-"Language: it\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
-msgstr "Dizionario"
+msgstr "Słownik"
 
 #: src/e_mod_main.c:368
 msgid "Select"
-msgstr "Seleziona"
+msgstr "Wybierz"
 
 #: src/e_mod_main.c:425
 msgid "General"
-msgstr "Generale"
+msgstr "Ogólne"
 
 #: src/e_mod_main.c:430
 msgid "Dictionary engines"
-msgstr "Motori del dizionario"
+msgstr "Silniki słownikowe"
 
 #: src/e_mod_main.c:433
 msgid "Stardict (default)"
-msgstr "Stardict (predefinito)"
+msgstr "Stardict (domyślne)"
 
 #: src/e_mod_main.c:436
 msgid "Custom"
-msgstr "Personalizzato"
+msgstr "Niestandardowe"
 
 #: src/e_mod_main.c:440
 msgid "Custom engine"
-msgstr "Motore personalizzato"
+msgstr "Silnik niestandardowy"
 
 #: src/e_mod_main.c:446
 msgid "Engine command"
-msgstr "Comando motore"
+msgstr "Komenda silnika"
 
 #: src/e_mod_main.c:543
 msgid "Launcher"
-msgstr "Lanciatore"
+msgstr "Launcher"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Plugin"
-msgstr "Plugin lanciatore"
+msgstr "Wtyczka launchera"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
-msgstr "Lanciatore Dizionario"
+msgstr "Launcher Słownika"
 
 #: src/e_mod_main.c:564
 msgid "Everything Dictionary"
-msgstr "Dizionario Everything"
+msgstr "Słownik 'Everything'"
