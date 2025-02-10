@@ -1,11 +1,12 @@
-# Portuguese translation for spell-checker.
+# Portuguese translationfor Launcher-Dictionary module.
 # This file is put in the public domain.
+#
 # Sérgio Marques <smarquespt@gmail.com>, 2012.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2023, 2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: spell-checker\n"
+"Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2024-12-17 00:17+0000\n"

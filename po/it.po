@@ -1,15 +1,16 @@
-# Italian translation for spell-checker.
+# Italian translation for Launcher-Dictionary module.
 # This file is put in the public domain.
+#
 # Massimo Maiurana <maiurana@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: spell-checker VERSION\n"
+"Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
-"PO-Revision-Date: 2012-11-28 18:41+0100\n"
-"Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-02-01 12:05+0100\n"
+"Last-Translator: diekrz2\n"
+"Language-Team: Italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -17,11 +18,11 @@ msgstr ""
 
 #: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
-msgstr ""
+msgstr "Dizionario"
 
 #: src/e_mod_main.c:368
 msgid "Select"
-msgstr ""
+msgstr "Seleziona"
 
 #: src/e_mod_main.c:425
 msgid "General"
@@ -29,11 +30,11 @@ msgstr "Generale"
 
 #: src/e_mod_main.c:430
 msgid "Dictionary engines"
-msgstr ""
+msgstr "Motori del dizionario"
 
 #: src/e_mod_main.c:433
 msgid "Stardict (default)"
-msgstr ""
+msgstr "Stardict (predefinito)"
 
 #: src/e_mod_main.c:436
 msgid "Custom"
@@ -41,11 +42,11 @@ msgstr "Personalizzato"
 
 #: src/e_mod_main.c:440
 msgid "Custom engine"
-msgstr "Personalizzato"
+msgstr "Motore personalizzato"
 
 #: src/e_mod_main.c:446
 msgid "Engine command"
-msgstr ""
+msgstr "Comando motore"
 
 #: src/e_mod_main.c:543
 msgid "Launcher"
@@ -53,12 +54,12 @@ msgstr "Lanciatore"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Plugin"
-msgstr "Lanciatore"
+msgstr "Plugin lanciatore"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
-msgstr "Lanciatore"
+msgstr "Lanciatore Dizionario"
 
 #: src/e_mod_main.c:564
 msgid "Everything Dictionary"
-msgstr "Plugin di Everything"
+msgstr "Dizionario Everything"

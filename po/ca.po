@@ -1,14 +1,16 @@
-# Catalan translation for launcher-places.
+# Catalan translation for Launcher-Dictionary module.
 # This file is put in the public domain.
+#
+# Marc Furtià i Puig <marc.furtia@gmail.com>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: spell-checker VERSION\n"
+"Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2013-02-01 09:52+0100\n"
 "Last-Translator: Marc Furtià i Puig <marc.furtia@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: Catalan\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

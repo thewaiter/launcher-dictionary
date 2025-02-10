@@ -1,16 +1,16 @@
-# Spanish translation for spell-checker.
+# Slovakian translation for Launcher-Dictionary module.
 # This file is put in the public domain.
+#
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
-# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
-
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: dictionary 0.0.1\n"
+"Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
 "PO-Revision-Date: 2012-11-08 02:06+0100\n"
 "Last-Translator: Štefan Uram <thewaiter@bodhilinux.com>\n"
-"Language-Team: Enlightenment Team\n"
+"Language-Team: Slovakian\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
