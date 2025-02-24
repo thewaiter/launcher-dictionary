@@ -1,65 +1,66 @@
 # Malayalam translations for the Launcher-Dictionary module.
 # This file is put in the public domain.
 #
-# Automatically generated, 2025.
+# Indraneel Rajeevan <https://github.com/indraneel12>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
-"PO-Revision-Date: 2019-04-14 18:02+0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-24 21:58+0530\n"
+"Last-Translator: Indraneel Rajeevan <https://github.com/indraneel12>\n"
 "Language-Team: Malayalam\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
-msgstr ""
+msgstr "ഡിക്ഷ്ണരി"
 
 #: src/e_mod_main.c:368
 msgid "Select"
-msgstr ""
+msgstr "സെലെക്ട്ട്"
 
 #: src/e_mod_main.c:425
 msgid "General"
-msgstr ""
+msgstr "പൊതുവായ"
 
 #: src/e_mod_main.c:430
 msgid "Dictionary engines"
-msgstr ""
+msgstr "ഡിക്ഷ്ണരി എഞ്ചിനുകൾ"
 
 #: src/e_mod_main.c:433
 msgid "Stardict (default)"
-msgstr ""
+msgstr "സ്റ്റാർഡിക്റ്റ് (സ്ഥിരസ്ഥിതി)"
 
 #: src/e_mod_main.c:436
 msgid "Custom"
-msgstr ""
+msgstr "ഇഷ്ടാനുസൃത"
 
 #: src/e_mod_main.c:440
 msgid "Custom engine"
-msgstr ""
+msgstr "ഇഷ്ടാനുസൃത എഞ്ചിൻ"
 
 #: src/e_mod_main.c:446
 msgid "Engine command"
-msgstr ""
+msgstr "എഞ്ചിൻ നിർദേശം"
 
 #: src/e_mod_main.c:543
 msgid "Launcher"
-msgstr ""
+msgstr "ലോഞ്ചർ"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Plugin"
-msgstr ""
+msgstr "ലോഞ്ചർ പ്ലഗിൻ"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
-msgstr ""
+msgstr "ലോഞ്ചർ ഡിക്ഷ്ണരി"
 
 #: src/e_mod_main.c:564
 msgid "Everything Dictionary"
-msgstr ""
+msgstr "പരമോന്നത ഡിക്ഷ്ണരി"
