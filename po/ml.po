@@ -1,4 +1,4 @@
-# Malayalam translations for launcher-dictionary package.
+# Malayalam translations for the Launcher-Dictionary module.
 # This file is put in the public domain.
 #
 # Automatically generated, 2025.
