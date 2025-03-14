@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: launcher-dictionary\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2019-04-14 18:02+0200\n"
+"PO-Revision-Date: 2025-03-14 11:26-0300\n"
+"Last-Translator: \n"
+"Language-Team: LANGUAGE\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/e_mod_main.c:343 src/e_mod_main.c:411
+msgid "Dictionary"
+msgstr "Dicionário"
+
+#: src/e_mod_main.c:368
+msgid "Select"
+msgstr "Selecionar"
+
+#: src/e_mod_main.c:425
+msgid "General"
+msgstr "Geral"
+
+#: src/e_mod_main.c:430
+msgid "Dictionary engines"
+msgstr "Provedores de Dicionário"
+
+#: src/e_mod_main.c:433
+msgid "Stardict (default)"
+msgstr "Stardict (padrão)"
+
+#: src/e_mod_main.c:436
+msgid "Custom"
+msgstr "Customizado"
+
+#: src/e_mod_main.c:440
+msgid "Custom engine"
+msgstr "Provedor personalizado"
+
+#: src/e_mod_main.c:446
+msgid "Engine command"
+msgstr "Comando do provedor"
+
+#: src/e_mod_main.c:543
+msgid "Launcher"
+msgstr "Lançador"
+
+#: src/e_mod_main.c:545
+msgid "Launcher Plugin"
+msgstr "Plugin do Lançador"
+
+#: src/e_mod_main.c:545
+msgid "Launcher Dictionary"
+msgstr "Dicionário do Lançador"
+
+#: src/e_mod_main.c:564
+msgid "Everything Dictionary"
+msgstr "Dicionário do Everything"
