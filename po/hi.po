@@ -18,48 +18,48 @@ msgstr ""
 
 #: src/e_mod_main.c:343 src/e_mod_main.c:411
 msgid "Dictionary"
-msgstr ""
+msgstr "शब्दकोष"
 
 #: src/e_mod_main.c:368
 msgid "Select"
-msgstr ""
+msgstr "चुनें"
 
 #: src/e_mod_main.c:425
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: src/e_mod_main.c:430
 msgid "Dictionary engines"
-msgstr ""
+msgstr "शब्दकोश इंजन"
 
 #: src/e_mod_main.c:433
 msgid "Stardict (default)"
-msgstr ""
+msgstr "स्टारडिक्ट (डिफ़ॉल्ट)"
 
 #: src/e_mod_main.c:436
 msgid "Custom"
-msgstr ""
+msgstr "कस्टम"
 
 #: src/e_mod_main.c:440
 msgid "Custom engine"
-msgstr ""
+msgstr "कस्टम इंजन"
 
 #: src/e_mod_main.c:446
 msgid "Engine command"
-msgstr ""
+msgstr "इंजन कमांड"
 
 #: src/e_mod_main.c:543
 msgid "Launcher"
-msgstr ""
+msgstr "लांचर"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Plugin"
-msgstr ""
+msgstr "लॉन्चर प्लगइन"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
-msgstr ""
+msgstr "लांचर शब्दकोश"
 
 #: src/e_mod_main.c:564
 msgid "Everything Dictionary"
-msgstr ""
+msgstr "संपूर्ण शब्दकोश"
