@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: launcher-dictionary\n"
 "Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2019-04-14 18:02+0200\n"
-"PO-Revision-Date: 2025-02-01 12:05+0100\n"
+"PO-Revision-Date: 2025-05-20 16:04+0100\n"
 "Last-Translator: diekrz2\n"
 "Language-Team: Italian\n"
 "Language: it\n"
@@ -50,15 +50,15 @@ msgstr "Comando motore"
 
 #: src/e_mod_main.c:543
 msgid "Launcher"
-msgstr "Lanciatore"
+msgstr "Launcher"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Plugin"
-msgstr "Plugin lanciatore"
+msgstr "Launcher Plugin"
 
 #: src/e_mod_main.c:545
 msgid "Launcher Dictionary"
-msgstr "Lanciatore Dizionario"
+msgstr "Launcher Dizionario"
 
 #: src/e_mod_main.c:564
 msgid "Everything Dictionary"
